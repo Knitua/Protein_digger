@@ -14,6 +14,7 @@ const candidates = [
     lddt: 0.8441,
     pident: 16.0,
     matchedPlddt: 77.8255,
+    hasLiteratureEvidence: false,
     annotation: "Tudor 结构域",
     annotationSourceShort: "UniProt / InterPro",
     annotationSource: "UniProt feature；InterPro IPR002999",
@@ -35,8 +36,8 @@ const candidates = [
     lddt: 0.8053,
     pident: 9.5,
     matchedPlddt: 75.7359,
+    hasLiteratureEvidence: false,
     annotation: null,
-    focus: true,
     interactionNote: "1 条调控锚点连接来自 HI-union 实验互作；提示该未表征蛋白与已知调控网络存在可追溯连接。",
     note: "DUF4537 区间被 PWWP 与 Tudor 双命中，是当前最值得进行人工结构叠合和功能假说复核的探索候选。"
   },
@@ -55,8 +56,8 @@ const candidates = [
     lddt: 0.7876,
     pident: 8.0,
     matchedPlddt: 91.1549,
+    hasLiteratureEvidence: false,
     annotation: null,
-    focus: true,
     interactionNote: "1 条调控锚点连接来自 RF2-PPI final80 高置信预测；当前缺少 HI-union 实验互作支持，后续需要优先复核预测界面和文献背景。",
     note: "Tudor 命中落在半甲基化 DNA 结合 / YccV-like 区间，结构可信但更像已知 DNA 结合折叠的交叉命中。"
   },
@@ -75,6 +76,7 @@ const candidates = [
     lddt: 0.8431,
     pident: 41.1,
     matchedPlddt: 88.711,
+    hasLiteratureEvidence: true,
     annotation: "PHD 指结构域",
     annotationSourceShort: "UniProt / Pfam / InterPro",
     annotationSource: "UniProt feature；Pfam PF00628；InterPro PHD zinc finger 条目",
@@ -96,6 +98,7 @@ const candidates = [
     lddt: 0.8369,
     pident: 33.9,
     matchedPlddt: 88.6786,
+    hasLiteratureEvidence: true,
     annotation: "PHD 指结构域",
     annotationSourceShort: "UniProt / Pfam / InterPro",
     annotationSource: "UniProt feature；Pfam PF00628；InterPro PHD zinc finger 条目",
@@ -117,6 +120,7 @@ const candidates = [
     lddt: 0.7344,
     pident: 5.8,
     matchedPlddt: 93.4599,
+    hasLiteratureEvidence: true,
     annotation: "SET 结构域",
     annotationSourceShort: "UniProt / Pfam / InterPro",
     annotationSource: "UniProt feature；Pfam PF00856；InterPro IPR001214 / IPR046341 / IPR044422",
@@ -138,12 +142,12 @@ const candidates = [
     lddt: 0.8655,
     pident: 25.7,
     matchedPlddt: 93.0245,
+    hasLiteratureEvidence: true,
     annotation: "PWWP 结构域",
     annotationSourceShort: "UniProt / Pfam / InterPro",
-    focus: true,
     annotationSource: "UniProt feature；Pfam PF00855；InterPro IPR000313",
     interactionNote: "1 条调控锚点连接来自 HI-union 实验互作；结构上已有 PWWP 注释，但 Tudor 命中仍需要单独复核。",
-    note: "已有 PWWP 注释，但 Tudor 命中未被同类注释过滤剔除，适合作为读码器样折叠交叉相似性的重点复核对象。"
+    note: "已有 PWWP 注释和 reader 文献背景，但 Tudor 命中未被同类注释过滤剔除，适合作为读码器样折叠交叉相似性的补充验证对象。"
   }
 ];
 
@@ -155,19 +159,24 @@ let selectedGene = "C11orf16";
 
 function candidateMatches(candidate) {
   if (activeFilter === "strict") return Boolean(candidate.strictDomain);
-  if (activeFilter === "review") return Boolean(candidate.focus);
-  if (activeFilter === "annotated") return Boolean(candidate.annotation);
+  if (activeFilter === "literature") return candidate.hasLiteratureEvidence;
+  if (activeFilter === "no-literature") return !candidate.hasLiteratureEvidence;
   return true;
 }
 
 function tagMarkup(candidate) {
   const tags = [`<span class="tag">${candidate.domain}</span>`];
 
-  if (candidate.focus) tags.push(`<span class="tag review">重点人工复核</span>`);
-  if (candidate.annotation) {
-    tags.push(`<span class="tag warn">已有同类注释：${candidate.annotation}（${candidate.annotationSourceShort}）</span>`);
+  if (candidate.hasLiteratureEvidence) {
+    tags.push(`<span class="tag literature">已有文献证据</span>`);
   } else {
-    tags.push(`<span class="tag">未见同类注释</span>`);
+    tags.push(`<span class="tag no-literature">尚无文献证据</span>`);
+  }
+
+  if (candidate.annotation) {
+    tags.push(`<span class="tag warn">结构域注释：${candidate.annotation}（${candidate.annotationSourceShort}）</span>`);
+  } else {
+    tags.push(`<span class="tag">未见同类结构域注释</span>`);
   }
   return tags.join("");
 }

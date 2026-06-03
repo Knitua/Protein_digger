@@ -637,7 +637,12 @@ h3 {
   background: rgba(185, 130, 23, 0.15);
 }
 
-.tag.review {
+.tag.literature {
+  color: var(--teal-dark);
+  background: rgba(23, 116, 109, 0.12);
+}
+
+.tag.no-literature {
   color: #843432;
   background: rgba(158, 63, 60, 0.14);
 }

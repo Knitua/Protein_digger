@@ -223,15 +223,15 @@
           <p class="eyebrow">候选分层</p>
           <h2>第一轮 7 个候选蛋白</h2>
           <p>
-            候选按结构解释状态分层：注释外结构命中用于寻找潜在新结构线索；已有同类注释对象更适合作为流程回收、弱注释复核或生物学关联补充。
+            候选按结构解释状态和文献证据状态分层：注释外结构命中用于寻找潜在新结构线索；文献证据分组用于区分已有调控或 reader 背景的对象和尚缺直接文献支撑的探索候选。
           </p>
         </div>
 
         <div class="segmented-control" role="tablist" aria-label="候选筛选">
           <button class="segment active" type="button" data-filter="all">全部候选</button>
           <button class="segment" type="button" data-filter="strict">注释外结构命中</button>
-          <button class="segment" type="button" data-filter="review">重点复核</button>
-          <button class="segment" type="button" data-filter="annotated">已有同类注释</button>
+          <button class="segment" type="button" data-filter="literature">已有文献证据</button>
+          <button class="segment" type="button" data-filter="no-literature">尚无文献证据</button>
         </div>
 
         <div class="candidate-layout">
@@ -246,19 +246,19 @@
             <p class="subsection-lead">仅保留蛋白与目前文献证据两列，用于区分真正具备新颖性的候选、已知表观 reader，以及更适合作为阳性回收的对象。</p>
             <div class="literature-summary" aria-label="文献证据摘要">
               <div>
-                <span class="summary-number">1</span>
-                <span>探索主候选</span>
-                <strong>C11orf16</strong>
+                <span class="summary-number">4</span>
+                <span>已有文献证据</span>
+                <strong>PHF21B / PHF3 / SMYD5 / ZCWPW2</strong>
               </div>
               <div>
                 <span class="summary-number">3</span>
-                <span>需重点人工复核</span>
-                <strong>ALG13 / FBXO21 / ZCWPW2</strong>
+                <span>尚无文献证据</span>
+                <strong>ALG13 / C11orf16 / FBXO21</strong>
               </div>
               <div>
-                <span class="summary-number">4</span>
-                <span>已有 reader 或阳性回收背景</span>
-                <strong>PHF21B / PHF3 / SMYD5 / ZCWPW2</strong>
+                <span class="summary-number">1</span>
+                <span>探索主候选</span>
+                <strong>C11orf16</strong>
               </div>
             </div>
           </div>
@@ -270,7 +270,7 @@
             <article class="literature-entry risk">
               <div class="literature-gene">
                 <strong>ALG13</strong>
-                <span class="literature-status status-risk">探索候选（可能假阳性）</span>
+                <span class="literature-status status-risk">尚无文献证据（可能假阳性）</span>
                 <span class="literature-role">ER 相关 N-糖基化通路</span>
               </div>
               <div class="literature-evidence">
@@ -280,7 +280,7 @@
             <article class="literature-entry featured">
               <div class="literature-gene">
                 <strong>C11orf16</strong>
-                <span class="literature-status status-primary">探索主候选</span>
+                <span class="literature-status status-primary">尚无文献证据（探索主候选）</span>
                 <span class="literature-role">未表征蛋白 / DUF4537</span>
               </div>
               <div class="literature-evidence">
@@ -290,7 +290,7 @@
             <article class="literature-entry bridge">
               <div class="literature-gene">
                 <strong>FBXO21</strong>
-                <span class="literature-status status-bridge">探索候选</span>
+                <span class="literature-status status-bridge">尚无文献证据（探索候选）</span>
                 <span class="literature-role">F-box / 泛素连接酶相关</span>
               </div>
               <div class="literature-evidence">
