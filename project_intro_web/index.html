@@ -17,7 +17,6 @@
         <a href="#workflow">方法流程</a>
         <a href="#evidence">证据模型</a>
         <a href="#candidates">候选分层</a>
-        <a href="#interpretation">解释边界</a>
         <a href="#validation">验证设计</a>
       </nav>
     </header>
@@ -69,9 +68,9 @@
       <section id="overview" class="section-band">
         <div class="section-heading">
           <p class="eyebrow">阶段性结论</p>
-          <h2>第一轮计算候选集已经形成，核心任务转向复核与验证设计</h2>
+          <h2>第一轮计算候选集已经形成，核心任务转向实验验证设计</h2>
           <p>
-            当前结果不是功能定论，而是面向后续人工结构复核、互作证据去噪和实验优先级排序的候选假说集合。7 个候选均不属于已定义的 TF / EpiFactors 调控锚点集合，也未命中本轮非 TF 锚点清单。
+            当前结果不是功能定论，而是面向后续实验优先级排序的候选假说集合。结构命中与互作来源已经完成初步复查，下一步应集中验证候选是否进入核内、是否能形成可复现互作，以及是否影响转录或染色质状态。
           </p>
         </div>
 
@@ -165,7 +164,7 @@
       <section id="evidence" class="section-band">
         <div class="section-heading">
           <p class="eyebrow">证据模型</p>
-          <h2>三条独立证据线的定义、阈值与解释边界</h2>
+          <h2>三条独立证据线的定义、阈值与适用范围</h2>
           <p>
             本轮不依赖单一模型分数排序，而是要求候选同时获得定位、互作和结构三个层面的支持。每条证据线均保留明确的输入集合、阈值口径和反向解释限制。
           </p>
@@ -342,81 +341,35 @@
         </div>
       </section>
 
-      <section id="interpretation" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">解释边界</p>
-          <h2>结构命中需要从“相似折叠”谨慎推进到“功能假说”</h2>
-          <p>
-            Foldseek 命中提供的是三维结构相似证据。对于候选蛋白，应优先复核命中区间是否落在已知弱注释区域、是否具有可靠局部结构置信度，以及关键口袋或催化位点是否保守。
-          </p>
-        </div>
-
-        <div class="review-grid">
-          <article class="review-panel primary-review">
-            <p class="review-tag">高优先级探索候选</p>
-            <h3>C11orf16</h3>
-            <p>
-              PWWP 与 Tudor 查询结构均命中 76-211 / 84-211 附近，基本覆盖 DUF4537 区间。局部 pLDDT 明显高于全长均值，提示该区间具备可复核的稳定折叠。
-            </p>
-            <dl>
-              <div><dt>结构命中</dt><dd>PWWP / Tudor</dd></div>
-              <div><dt>qTM</dt><dd>0.8569 / 0.8702</dd></div>
-              <div><dt>推荐表述</dt><dd>DUF4537 区间具有读码器样折叠线索</dd></div>
-            </dl>
-          </article>
-
-          <article class="review-panel">
-            <p class="review-tag">中低优先级结构候选</p>
-            <h3>FBXO21</h3>
-            <p>
-              Tudor 查询结构命中 501-572，位于半甲基化 DNA 结合 / YccV-like 结构域注释区间内。该区域 AlphaFold 置信度高，但更可能是已知 DNA 结合折叠与 Tudor 查询结构的结构交叉命中。
-            </p>
-            <dl>
-              <div><dt>结构命中</dt><dd>Tudor</dd></div>
-              <div><dt>命中区间 pLDDT</dt><dd>91.15</dd></div>
-              <div><dt>推荐表述</dt><dd>DNA 结合折叠交叉命中线索</dd></div>
-            </dl>
-          </article>
-
-          <article class="review-panel">
-            <p class="review-tag">结构交叉命中复核</p>
-            <h3>ZCWPW2</h3>
-            <p>
-              ZCWPW2 已有 PWWP 注释，但 Tudor 命中没有对应同类结构域注释。该候选更适合用于复核 PWWP 与 Tudor 类读码器折叠之间的交叉相似性，并评估是否存在额外功能解释。
-            </p>
-            <dl>
-              <div><dt>结构命中</dt><dd>PWWP / Tudor</dd></div>
-              <div><dt>核定位双模型</dt><dd>0.9653 / 0.9512</dd></div>
-              <div><dt>推荐表述</dt><dd>已有 PWWP 背景上的 Tudor 样复核线索</dd></div>
-            </dl>
-          </article>
-        </div>
-      </section>
-
       <section id="validation" class="section-band muted">
         <div class="section-heading">
           <p class="eyebrow">验证设计</p>
-          <h2>从计算候选到实验优先级的下一步</h2>
+          <h2>结构与互作复查后，下一步应转向可验证的细胞实验</h2>
           <p>
-            后续工作应围绕“结构是否可信、互作是否可靠、是否影响核内调控过程”三个问题推进，并将结果反馈到候选评分矩阵中。
+            既然结构命中和互作证据已经完成初步复查，后续不需要继续重复筛表，而应把候选收敛为实验问题：候选是否稳定进入核内，是否能复现实验互作，扰动后是否改变转录或染色质读出。
           </p>
         </div>
 
         <div class="validation-grid">
           <article>
             <span class="validation-index">一</span>
-            <h3>结构复核</h3>
-            <p>对 C11orf16、FBXO21、ZCWPW2 的命中区间进行查询结构与目标结构叠合，检查 β 折叠、芳香笼、催化/结合口袋和局部 pLDDT/PAE。</p>
+            <h3>候选收敛</h3>
+            <p>将 C11orf16 作为探索主候选；ZCWPW2、PHF21B、PHF3、SMYD5 作为 reader 或阳性回收参照；ALG13 和 FBXO21 暂列为低优先级或条件性复核对象。</p>
           </article>
           <article>
             <span class="validation-index">二</span>
-            <h3>互作去噪</h3>
-            <p>区分 HI-union 实验证据与 RF2 final80 预测证据，检查连接锚点数量、互作来源、文献背景和高频互作蛋白风险。</p>
+            <h3>核定位确认</h3>
+            <p>优先对 C11orf16 做标签表达或抗体免疫荧光，并配合核质分离 Western blot，确认其是否稳定进入细胞核或染色质组分。</p>
           </article>
           <article>
             <span class="validation-index">三</span>
-            <h3>定位与功能验证</h3>
-            <p>优先采用免疫荧光确认核定位，随后用 Co-IP / AP-MS 验证互作，并结合 ChIP-seq、CUT&RUN、ATAC-seq 或 RNA-seq 评估调控功能。</p>
+            <h3>定向互作验证</h3>
+            <p>围绕已复查过的调控锚点设计 Co-IP、反向 Co-IP 或 BioID/AP-MS，不再做泛化互作筛查，而是验证 C11orf16 与具体 TF / EpiFactors 锚点是否可复现。</p>
+          </article>
+          <article>
+            <span class="validation-index">四</span>
+            <h3>功能读出</h3>
+            <p>在定位和互作成立后，再做 siRNA、CRISPRi 或过表达扰动，并用 RNA-seq、ATAC-seq、CUT&RUN / CUT&Tag 检查转录变化和染色质标记变化。</p>
           </article>
         </div>
       </section>

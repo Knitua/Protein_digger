@@ -346,7 +346,6 @@ h3 {
 .evidence-card,
 .candidate-card,
 .candidate-detail,
-.review-panel,
 .validation-grid article {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -410,7 +409,6 @@ h3 {
 .principle-grid p,
 .timeline-item p,
 .evidence-card p,
-.review-panel p,
 .validation-grid p {
   color: var(--muted);
 }
@@ -946,68 +944,28 @@ h3 {
   font-weight: 900;
 }
 
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.review-panel {
-  padding: 22px;
-}
-
-.primary-review {
-  border-color: rgba(15, 87, 82, 0.48);
-  box-shadow: 0 14px 30px rgba(21, 31, 38, 0.08);
-}
-
-.review-tag {
-  display: inline-flex;
-  min-height: 28px;
-  align-items: center;
-  margin-bottom: 12px;
-  padding: 0 9px;
-  color: var(--teal-dark);
-  background: rgba(23, 116, 109, 0.1);
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.review-panel dl {
-  display: grid;
-  gap: 10px;
-  margin: 20px 0 0;
-}
-
-.review-panel dl div {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-}
-
-.review-panel dt {
-  color: var(--muted);
-}
-
-.review-panel dd {
-  margin: 0;
-  color: var(--ink);
-  font-weight: 900;
-  text-align: right;
-}
-
 .validation-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
 .validation-grid article {
-  min-height: 260px;
+  min-height: 286px;
   padding: 22px;
+  border-top: 5px solid var(--teal);
+}
+
+.validation-grid article:nth-child(2) {
+  border-top-color: var(--gold);
+}
+
+.validation-grid article:nth-child(3) {
+  border-top-color: var(--violet);
+}
+
+.validation-grid article:nth-child(4) {
+  border-top-color: var(--green);
 }
 
 .validation-index {
@@ -1069,7 +1027,6 @@ h3 {
   .principle-grid,
   .evidence-layout,
   .candidate-layout,
-  .review-grid,
   .validation-grid {
     grid-template-columns: 1fr;
   }
@@ -1134,14 +1091,6 @@ h3 {
 
   .score-row {
     grid-template-columns: 1fr;
-  }
-
-  .review-panel dl div {
-    display: grid;
-  }
-
-  .review-panel dd {
-    text-align: left;
   }
 
   .literature-head,
