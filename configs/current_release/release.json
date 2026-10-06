@@ -22,9 +22,13 @@
     "failure_pool": 2631,
     "extended_candidates": 9
   },
-  "capsul_benchmark": {
-    "split": {"train": 14126, "validation": 3027, "test": 3028},
-    "selection": "validation_bce_only",
-    "threshold": "probability > 0.5"
+  "deeploc_benchmark": {
+    "logical_samples": 28300,
+    "official_outer_folds": [0, 1, 2, 3, 4],
+    "baseline": "DeepLoc 2.0 official ProtT5 checkpoints",
+    "candidate": "ProteinDigger Nucleus Specialist",
+    "threshold": "per-label maximum MCC on non-test folds",
+    "ensemble": false,
+    "reporting": "five-fold mean and standard deviation"
   }
 }

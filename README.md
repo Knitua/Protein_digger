@@ -30,6 +30,23 @@ ProteinDigger 是一个面向人类转录与表观遗传调控蛋白发现的多
 - **1,620 个 UniProt 蛋白条目**，包括 152 条可变异构体；
 - **5,954 对唯一 candidate–anchor 互作**，对应 5,957 条来源记录。
 
+### 核定位预测基准
+
+我们在 DeepLoc 2.0 的 28,300 条蛋白逻辑数据集和官方五折划分上，将 ProteinDigger Nucleus Specialist 与官方 DeepLoc 2.0 ProtT5 checkpoint 做严格 OOF 对照。两者都采用“第 *i* 个 checkpoint 只预测第 *i* 个外层折”、非测试折 max-MCC 阈值校准且不使用 ensemble。下表为五折平均值 ± 标准差：
+
+| 指标 | DeepLoc 2.0 | ProteinDigger Nucleus Specialist | 差值 |
+|---|---:|---:|---:|
+| Overall micro-F1 | 0.7253 ± 0.0140 | **0.7462 ± 0.0133** | **+2.09 pp** |
+| Overall macro-F1 | 0.6579 ± 0.0080 | **0.6647 ± 0.0094** | **+0.68 pp** |
+| Nucleus precision | 0.8177 ± 0.0328 | **0.8383 ± 0.0204** | **+2.06 pp** |
+| Nucleus recall | **0.7647 ± 0.0278** | 0.7600 ± 0.0208 | −0.48 pp |
+| Nucleus F1 | 0.7894 ± 0.0135 | **0.7972 ± 0.0200** | **+0.78 pp** |
+| Nucleus MCC | 0.6861 ± 0.0172 | **0.7008 ± 0.0244** | **+1.47 pp** |
+| Nucleus ROC-AUC | 0.9281 ± 0.0065 | **0.9330 ± 0.0068** | **+0.49 pp** |
+| Nucleus PR-AUC | 0.8843 ± 0.0155 | **0.8959 ± 0.0151** | **+1.16 pp** |
+
+完整评测口径和机器可读结果见 [`benchmarks/deeploc/`](benchmarks/deeploc/)。
+
 ### 为什么采用多路径设计
 
 - **互补发现**：注释、序列、网络和异构体信息覆盖不同的生物学信号，降低单一数据源造成的系统性遗漏。
@@ -45,6 +62,7 @@ Protein_digger/
 ├── docs/methods/                # 路线定义、阈值和证据口径
 ├── docs/assets/                 # README 与方法说明使用的图像
 ├── results/current_release/     # 当前候选主表与 candidate–anchor 配对
+├── benchmarks/deeploc/          # DeepLoc 2.0 协议下的核定位预测对照
 ├── configs/current_release/     # 机器可读的版本与计数
 └── requirements.txt             # Python 依赖概览
 ```
@@ -53,6 +71,7 @@ Protein_digger/
 
 - [`candidates_1580.tsv`](results/current_release/candidates_1580.tsv)：按筛选路径记录的候选主表；
 - [`candidate_anchor_pairs_5957.tsv`](results/current_release/candidate_anchor_pairs_5957.tsv)：逐对互作证据与来源；
+- [`benchmarks/deeploc/`](benchmarks/deeploc/)：DeepLoc 2.0 与 Nucleus Specialist 的同协议对照；
 - [`pipeline.md`](docs/methods/pipeline.md)：当前筛选口径、阈值和数据来源说明。
 
 ### 快速读取结果
@@ -101,6 +120,23 @@ After cross-route integration, the current release contains:
 - **1,620 UniProt protein accessions**, including 152 alternative isoforms;
 - **5,954 unique candidate–anchor interaction pairs**, represented by 5,957 provenance-bearing source records.
 
+### Nuclear-localization benchmark
+
+We evaluated ProteinDigger Nucleus Specialist against the official DeepLoc 2.0 ProtT5 checkpoints on the same 28,300-protein logical dataset and official five-fold split. For both models, checkpoint *i* predicts outer fold *i* only; thresholds are calibrated by maximum MCC on the non-test folds, and no ensemble is used. Values are five-fold mean ± standard deviation:
+
+| Metric | DeepLoc 2.0 | ProteinDigger Nucleus Specialist | Difference |
+|---|---:|---:|---:|
+| Overall micro-F1 | 0.7253 ± 0.0140 | **0.7462 ± 0.0133** | **+2.09 pp** |
+| Overall macro-F1 | 0.6579 ± 0.0080 | **0.6647 ± 0.0094** | **+0.68 pp** |
+| Nucleus precision | 0.8177 ± 0.0328 | **0.8383 ± 0.0204** | **+2.06 pp** |
+| Nucleus recall | **0.7647 ± 0.0278** | 0.7600 ± 0.0208 | −0.48 pp |
+| Nucleus F1 | 0.7894 ± 0.0135 | **0.7972 ± 0.0200** | **+0.78 pp** |
+| Nucleus MCC | 0.6861 ± 0.0172 | **0.7008 ± 0.0244** | **+1.47 pp** |
+| Nucleus ROC-AUC | 0.9281 ± 0.0065 | **0.9330 ± 0.0068** | **+0.49 pp** |
+| Nucleus PR-AUC | 0.8843 ± 0.0155 | **0.8959 ± 0.0151** | **+1.16 pp** |
+
+See [`benchmarks/deeploc/`](benchmarks/deeploc/) for the complete protocol and machine-readable results.
+
 ### Why multiple routes?
 
 - **Complementary discovery:** annotations, sequences, networks, and isoforms expose different biological signals and reduce systematic blind spots.
@@ -116,6 +152,7 @@ Protein_digger/
 ├── docs/methods/                # Route definitions, thresholds, and evidence rules
 ├── docs/assets/                 # Figures used by the README and method notes
 ├── results/current_release/     # Current candidates and candidate–anchor pairs
+├── benchmarks/deeploc/          # Nuclear benchmark under the DeepLoc 2.0 protocol
 ├── configs/current_release/     # Machine-readable release metadata and counts
 └── requirements.txt             # Python dependency overview
 ```
@@ -124,6 +161,7 @@ Key files:
 
 - [`candidates_1580.tsv`](results/current_release/candidates_1580.tsv): candidate table with one record per retained discovery route;
 - [`candidate_anchor_pairs_5957.tsv`](results/current_release/candidate_anchor_pairs_5957.tsv): pair-level interaction evidence and provenance;
+- [`benchmarks/deeploc/`](benchmarks/deeploc/): protocol-matched DeepLoc 2.0 versus Nucleus Specialist benchmark;
 - [`pipeline.md`](docs/methods/pipeline.md): current route definitions, thresholds, and data sources.
 
 ### Quick start

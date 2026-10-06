@@ -1,0 +1,81 @@
+{
+  "schema": "proteindigger_deeploc2_benchmark_v1",
+  "created_date": "2026-10-06",
+  "reporting": "five_fold_mean_and_population_standard_deviation",
+  "dataset": {
+    "logical_samples": 28300,
+    "physical_rows": 28303,
+    "excluded_accessions": [
+      "Q04656-5",
+      "O43157",
+      "Q9UPN3-2"
+    ],
+    "dataset_sha256": "29a07b293fed2994a966b70bdcd6bacc59915b8b01fa200cb2b07d8db18384a2",
+    "official_outer_folds": [0, 1, 2, 3, 4]
+  },
+  "protocol": {
+    "outer_cv": "checkpoint i predicts official partition i only",
+    "threshold_calibration": "per-label maximum MCC on the four non-test partitions",
+    "prediction_rule": "probability > threshold",
+    "ensemble": false,
+    "protein_digger_checkpoint_selection": "minimum inner-validation focal loss",
+    "outer_targets_used_for_model_selection": false,
+    "external_hpa_test_included": false
+  },
+  "models": {
+    "deeploc_2_prott5": {
+      "name": "DeepLoc 2.0",
+      "encoder": "Rostlab/prot_t5_xl_uniref50",
+      "checkpoint_type": "official five-fold 1Layer checkpoints",
+      "source_metrics_sha256": "dac8fc9ccefe8ecb8ec2283c639791f474bd41c415e738299d2ef44fd1bb4c5f"
+    },
+    "proteindigger_nucleus_specialist": {
+      "name": "ProteinDigger Nucleus Specialist",
+      "encoder": "esm2_t36_3B_UR50D",
+      "architecture": "label-query head plus three-query Nucleus specialist",
+      "source_metrics_sha256": "2eb0ce2a52f5daf6b60b0d30b2c67d866c362cdd7d615fe47e0903e1091685ce"
+    }
+  },
+  "metrics": {
+    "overall_micro_f1": {
+      "deeploc_2_prott5": {"mean": 0.7252779249988788, "std": 0.013994295428809514},
+      "proteindigger_nucleus_specialist": {"mean": 0.7461998428794006, "std": 0.0132784047507849},
+      "difference_percentage_points": 2.092191788052176
+    },
+    "overall_macro_f1": {
+      "deeploc_2_prott5": {"mean": 0.6579359744380847, "std": 0.007991994615901494},
+      "proteindigger_nucleus_specialist": {"mean": 0.6646909608421311, "std": 0.009383190062541989},
+      "difference_percentage_points": 0.6754986404046386
+    },
+    "nucleus_precision": {
+      "deeploc_2_prott5": {"mean": 0.8176738358323178, "std": 0.03278634050122862},
+      "proteindigger_nucleus_specialist": {"mean": 0.838309306576396, "std": 0.020446507902337152},
+      "difference_percentage_points": 2.063547074407823
+    },
+    "nucleus_recall": {
+      "deeploc_2_prott5": {"mean": 0.7647394290750255, "std": 0.02775657826927494},
+      "proteindigger_nucleus_specialist": {"mean": 0.7599873828103735, "std": 0.020753184853057372},
+      "difference_percentage_points": -0.47520462646519746
+    },
+    "nucleus_f1": {
+      "deeploc_2_prott5": {"mean": 0.7894108850186837, "std": 0.013480950183191065},
+      "proteindigger_nucleus_specialist": {"mean": 0.7971916898055873, "std": 0.019975740447474546},
+      "difference_percentage_points": 0.7780804786903579
+    },
+    "nucleus_mcc": {
+      "deeploc_2_prott5": {"mean": 0.6861255954834291, "std": 0.017164700638033572},
+      "proteindigger_nucleus_specialist": {"mean": 0.7008416143178225, "std": 0.02438419395567548},
+      "difference_percentage_points": 1.4716018834393432
+    },
+    "nucleus_roc_auc": {
+      "deeploc_2_prott5": {"mean": 0.9280630234850407, "std": 0.006539613094039489},
+      "proteindigger_nucleus_specialist": {"mean": 0.9329740554408555, "std": 0.00682540528288722},
+      "difference_percentage_points": 0.49110319558147775
+    },
+    "nucleus_pr_auc": {
+      "deeploc_2_prott5": {"mean": 0.884276157835636, "std": 0.01549339327407062},
+      "proteindigger_nucleus_specialist": {"mean": 0.8959125335870576, "std": 0.015058175036722167},
+      "difference_percentage_points": 1.1636375751421626
+    }
+  }
+}
