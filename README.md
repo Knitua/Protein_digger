@@ -32,7 +32,7 @@ ProteinDigger 是一个面向人类转录与表观遗传调控蛋白发现的多
 
 ### 核定位预测基准
 
-我们在 DeepLoc 2.0 的 28,300 条蛋白逻辑数据集和官方五折划分上，将 ProteinDigger Nucleus Specialist 与官方 DeepLoc 2.0 ProtT5 checkpoint 做严格 OOF 对照。两者都采用“第 *i* 个 checkpoint 只预测第 *i* 个外层折”、非测试折 max-MCC 阈值校准且不使用 ensemble。下表为五折平均值 ± 标准差：
+我们构建了一个面向蛋白质核定位预测的序列模型 **ProteinDigger Nucleus Specialist**，并将它与经典核定位预测模型 **DeepLoc 2.0** 进行了比较。两种模型在相同的 28,300 条蛋白和 DeepLoc 2.0 官方五折划分上接受评测，以保证结果可以直接比较。下表为五折评测结果的平均值 ± 标准差：
 
 | 指标 | DeepLoc 2.0 | ProteinDigger Nucleus Specialist | 差值 |
 |---|---:|---:|---:|
@@ -121,7 +121,7 @@ After cross-route integration, the current release contains:
 
 ### Nuclear-localization benchmark
 
-We evaluated ProteinDigger Nucleus Specialist against the official DeepLoc 2.0 ProtT5 checkpoints on the same 28,300-protein logical dataset and official five-fold split. For both models, checkpoint *i* predicts outer fold *i* only; thresholds are calibrated by maximum MCC on the non-test folds, and no ensemble is used. Values are five-fold mean ± standard deviation:
+We developed **ProteinDigger Nucleus Specialist**, a protein-sequence model for nuclear-localization prediction, and compared it with **DeepLoc 2.0**, a well-established subcellular-localization predictor. Both models were evaluated on the same 28,300 proteins using the official DeepLoc 2.0 five-fold split, allowing a direct comparison. Values are the five-fold mean ± standard deviation:
 
 | Metric | DeepLoc 2.0 | ProteinDigger Nucleus Specialist | Difference |
 |---|---:|---:|---:|
