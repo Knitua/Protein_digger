@@ -1,0 +1,4 @@
+accession	gene	primary_stage2_final80_status	primary_stage2_category	stage2_5_v3_status	best_seed_accession	best_seed_gene	sequence_identity	seed_coverage	candidate_coverage	domain_architecture_pass	functional_pass	functional_pass_reason	interpretation
+P01112	HRAS	fail	NO_PPI_DATASET_SUPPORT	not_extended	P01116	KRAS	0.86772487	0.99470899	0.99470899	yes	no	strict_functional_similarity_below_primary_rule	not_extended_by_frozen_v3_rule
+P01116	KRAS	pass	RF2-final80-only	not_applicable_primary_positive_seed									primary_Stage2_positive_seed
+P01111	NRAS	fail	NO_PPI_DATASET_SUPPORT	extended_candidate	P01116	KRAS	0.86842105	1.00000000	1.00000000	yes	yes	go_mf_direct_jaccard_ge_0p50_with_ge2_shared	postfreeze_homology_domain_function_extension_not_direct_PPI_proof

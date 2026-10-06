@@ -1,0 +1,1992 @@
+{
+  "dataset_sha256": "50459272402c7e939108428298d444ee7c977d9a5630148665a98397ed0309f2",
+  "paired_bootstrap_seed42": {
+    "Nucleus_f1": {
+      "ci95_high": 0.023955568019300696,
+      "ci95_low": -0.0016162930347491055,
+      "delta_fullwindow_minus_middleclip": 0.01113066815723085,
+      "samples": 10000
+    },
+    "nuclear_family_micro_f1": {
+      "ci95_high": 0.01583205512724816,
+      "ci95_low": -0.004852137772832066,
+      "delta_fullwindow_minus_middleclip": 0.005573210017186803,
+      "samples": 10000
+    },
+    "overall_macro_f1": {
+      "ci95_high": 0.02147539649158716,
+      "ci95_low": 0.0027203358593396844,
+      "delta_fullwindow_minus_middleclip": 0.012011027032139354,
+      "samples": 10000
+    },
+    "overall_micro_f1": {
+      "ci95_high": 0.026508351834490892,
+      "ci95_low": 0.012520967423915863,
+      "delta_fullwindow_minus_middleclip": 0.01954649208735848,
+      "samples": 10000
+    }
+  },
+  "paper_references": {
+    "ESM-C 600M": {
+      "Nucleus": 0.649,
+      "macro_f1": 0.263,
+      "micro_f1": 0.495
+    },
+    "Published best by nuclear label": {
+      "Nuclear Membrane": 0.037,
+      "Nucleoli": 0.203,
+      "Nucleoplasm": 0.643
+    }
+  },
+  "protocol": "capsul_official_split_retrospective_validation_only_v1",
+  "test_count": 3028,
+  "threshold": ">0.5",
+  "variants": {
+    "fullwindow_mil": {
+      "mean_sd": {
+        "Nuclear Membrane_f1": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "Nuclear Membrane_mcc": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "Nuclear Membrane_pr_auc": {
+          "mean": 0.09123744983087874,
+          "sd": 0.01512297798080309
+        },
+        "Nuclear Membrane_precision": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "Nuclear Membrane_recall": {
+          "mean": 0.0,
+          "sd": 0.0
+        },
+        "Nuclear Membrane_roc_auc": {
+          "mean": 0.6548585853183093,
+          "sd": 0.014725835905640548
+        },
+        "Nucleoli_f1": {
+          "mean": 0.1700718342485057,
+          "sd": 0.062344401380239965
+        },
+        "Nucleoli_mcc": {
+          "mean": 0.26829085488053694,
+          "sd": 0.0323106029992714
+        },
+        "Nucleoli_pr_auc": {
+          "mean": 0.32052432841743494,
+          "sd": 0.011907706674188256
+        },
+        "Nucleoli_precision": {
+          "mean": 0.876379440665155,
+          "sd": 0.12273473487814995
+        },
+        "Nucleoli_recall": {
+          "mean": 0.09638554216867469,
+          "sd": 0.04192894180285361
+        },
+        "Nucleoli_roc_auc": {
+          "mean": 0.7485161950428557,
+          "sd": 0.013122751314455101
+        },
+        "Nucleoplasm_f1": {
+          "mean": 0.6089376230613257,
+          "sd": 0.0043127069575185535
+        },
+        "Nucleoplasm_mcc": {
+          "mean": 0.48516155333798383,
+          "sd": 0.0025747769962645166
+        },
+        "Nucleoplasm_pr_auc": {
+          "mean": 0.7283229420535489,
+          "sd": 0.005467275570473402
+        },
+        "Nucleoplasm_precision": {
+          "mean": 0.7688295519202392,
+          "sd": 0.00887722361951457
+        },
+        "Nucleoplasm_recall": {
+          "mean": 0.5042153047989624,
+          "sd": 0.009245510654593517
+        },
+        "Nucleoplasm_roc_auc": {
+          "mean": 0.8182365434500648,
+          "sd": 0.002903774233839022
+        },
+        "Nucleus_f1": {
+          "mean": 0.6368039597887558,
+          "sd": 0.005413601720821134
+        },
+        "Nucleus_mcc": {
+          "mean": 0.4711002900507797,
+          "sd": 0.009375982639492133
+        },
+        "Nucleus_pr_auc": {
+          "mean": 0.7579905453953502,
+          "sd": 0.004458398248491121
+        },
+        "Nucleus_precision": {
+          "mean": 0.740817277949918,
+          "sd": 0.012946443479901868
+        },
+        "Nucleus_recall": {
+          "mean": 0.5585507246376812,
+          "sd": 0.00957838356049756
+        },
+        "Nucleus_roc_auc": {
+          "mean": 0.8183457578984736,
+          "sd": 0.0035726622145055573
+        },
+        "macro_f1": {
+          "mean": 0.30412240298679327,
+          "sd": 0.011302849897387907
+        },
+        "micro_f1": {
+          "mean": 0.5105190528334022,
+          "sd": 0.007728310990357257
+        },
+        "nuclear_family_macro_f1": {
+          "mean": 0.35395335427464686,
+          "sd": 0.015781125435729754
+        },
+        "nuclear_family_micro_f1": {
+          "mean": 0.5816077311435516,
+          "sd": 0.00402359133125048
+        }
+      },
+      "seeds": {
+        "42": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.011922503725782414,
+            "hierarchy_inconsistent_proteins": 8,
+            "macro_f1": 0.37187040194798104,
+            "macro_precision": 0.5655887289416852,
+            "macro_recall": 0.2997112337015122,
+            "micro_f1": 0.5847895643613095,
+            "micro_precision": 0.7615384615384615,
+            "micro_recall": 0.4746304434678386,
+            "sub_label_positive_proteins": 671
+          },
+          "overall": {
+            "macro_f1": 0.3067940591919311,
+            "macro_precision": 0.6138631712914064,
+            "macro_recall": 0.24174569286602626,
+            "micro_f1": 0.5092970899691487,
+            "micro_precision": 0.708584686774942,
+            "micro_recall": 0.39750097618117924
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.08917197452229297,
+              "fn": 140,
+              "fp": 3,
+              "mcc": 0.17448139087463463,
+              "pr_auc": 0.24102478699808472,
+              "precision": 0.7,
+              "predicted_positive": 10,
+              "recall": 0.047619047619047616,
+              "roc_auc": 0.7748927408519812,
+              "support": 147,
+              "tp": 7
+            },
+            "Cytoplasm": {
+              "f1": 0.5658747300215984,
+              "fn": 453,
+              "fp": 351,
+              "mcc": 0.37664696416425925,
+              "pr_auc": 0.6224940491339573,
+              "precision": 0.5988571428571429,
+              "predicted_positive": 875,
+              "recall": 0.5363357215967247,
+              "roc_auc": 0.7791488486780546,
+              "support": 977,
+              "tp": 524
+            },
+            "Cytoskeleton": {
+              "f1": 0.23056300268096516,
+              "fn": 275,
+              "fp": 12,
+              "mcc": 0.3002623349722528,
+              "pr_auc": 0.44212745540873766,
+              "precision": 0.7818181818181819,
+              "predicted_positive": 55,
+              "recall": 0.13522012578616352,
+              "roc_auc": 0.8070795330594815,
+              "support": 318,
+              "tp": 43
+            },
+            "Cytosol": {
+              "f1": 0.45892351274787535,
+              "fn": 464,
+              "fp": 300,
+              "mcc": 0.30073350993201375,
+              "pr_auc": 0.5075618249190044,
+              "precision": 0.5192307692307693,
+              "predicted_positive": 624,
+              "recall": 0.41116751269035534,
+              "roc_auc": 0.7490252787345902,
+              "support": 788,
+              "tp": 324
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.5256124721603562,
+              "fn": 171,
+              "fp": 42,
+              "mcc": 0.5161254208396086,
+              "pr_auc": 0.5748253682089197,
+              "precision": 0.7375,
+              "predicted_positive": 160,
+              "recall": 0.4083044982698962,
+              "roc_auc": 0.8685588532172098,
+              "support": 289,
+              "tp": 118
+            },
+            "Endosome": {
+              "f1": 0.15267175572519084,
+              "fn": 98,
+              "fp": 13,
+              "mcc": 0.18827508110633395,
+              "pr_auc": 0.2583771730636109,
+              "precision": 0.43478260869565216,
+              "predicted_positive": 23,
+              "recall": 0.09259259259259259,
+              "roc_auc": 0.8688023211567732,
+              "support": 108,
+              "tp": 10
+            },
+            "Golgi Apparatus": {
+              "f1": 0.22941176470588234,
+              "fn": 248,
+              "fp": 14,
+              "mcc": 0.2921179814342626,
+              "pr_auc": 0.3595835486912703,
+              "precision": 0.7358490566037735,
+              "predicted_positive": 53,
+              "recall": 0.13588850174216027,
+              "roc_auc": 0.7770733995451697,
+              "support": 287,
+              "tp": 39
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.10381018677795854,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7749087288416859,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.07692307692307693,
+              "fn": 72,
+              "fp": 0,
+              "mcc": 0.1976055006428149,
+              "pr_auc": 0.27554900944003713,
+              "precision": 1.0,
+              "predicted_positive": 3,
+              "recall": 0.04,
+              "roc_auc": 0.8729111637882379,
+              "support": 75,
+              "tp": 3
+            },
+            "Mitochondria": {
+              "f1": 0.568421052631579,
+              "fn": 154,
+              "fp": 10,
+              "mcc": 0.5935890888089549,
+              "pr_auc": 0.5822289715400837,
+              "precision": 0.9152542372881356,
+              "predicted_positive": 118,
+              "recall": 0.4122137404580153,
+              "roc_auc": 0.8180185513293924,
+              "support": 262,
+              "tp": 108
+            },
+            "Nuclear Membrane": {
+              "f1": 0.0,
+              "fn": 76,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.08081707799337363,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.6673998894594209,
+              "support": 76,
+              "tp": 0
+            },
+            "Nucleoli": {
+              "f1": 0.2416107382550335,
+              "fn": 213,
+              "fp": 13,
+              "mcc": 0.30459973643132887,
+              "pr_auc": 0.3277285430055672,
+              "precision": 0.7346938775510204,
+              "predicted_positive": 49,
+              "recall": 0.14457831325301204,
+              "roc_auc": 0.7574103539021144,
+              "support": 249,
+              "tp": 36
+            },
+            "Nucleoplasm": {
+              "f1": 0.6041543026706232,
+              "fn": 519,
+              "fp": 148,
+              "mcc": 0.48382204616311847,
+              "pr_auc": 0.7337859958402788,
+              "precision": 0.7747336377473364,
+              "predicted_positive": 657,
+              "recall": 0.49513618677042803,
+              "roc_auc": 0.8204528210116733,
+              "support": 1028,
+              "tp": 509
+            },
+            "Nucleus": {
+              "f1": 0.6417165668662675,
+              "fn": 507,
+              "fp": 211,
+              "mcc": 0.48186866669783535,
+              "pr_auc": 0.7620847317382159,
+              "precision": 0.752927400468384,
+              "predicted_positive": 854,
+              "recall": 0.5591304347826087,
+              "roc_auc": 0.8217858961892855,
+              "support": 1150,
+              "tp": 643
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.16585644987995715,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8479911143761698,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.6069160197600565,
+              "fn": 462,
+              "fp": 95,
+              "mcc": 0.5269112971533282,
+              "pr_auc": 0.7691968733137836,
+              "precision": 0.819047619047619,
+              "predicted_positive": 525,
+              "recall": 0.4820627802690583,
+              "roc_auc": 0.8625776250818764,
+              "support": 892,
+              "tp": 430
+            },
+            "Primary Cilium": {
+              "f1": 0.17486338797814208,
+              "fn": 145,
+              "fp": 6,
+              "mcc": 0.2570228642277566,
+              "pr_auc": 0.34383907837180283,
+              "precision": 0.7272727272727273,
+              "predicted_positive": 22,
+              "recall": 0.09937888198757763,
+              "roc_auc": 0.8547045302402364,
+              "support": 161,
+              "tp": 16
+            },
+            "Secreted Proteins": {
+              "f1": 0.823747680890538,
+              "fn": 71,
+              "fp": 24,
+              "mcc": 0.8103871290502699,
+              "pr_auc": 0.8780689759231821,
+              "precision": 0.9024390243902439,
+              "predicted_positive": 246,
+              "recall": 0.757679180887372,
+              "roc_auc": 0.9659327014868566,
+              "support": 293,
+              "tp": 222
+            },
+            "Sperm": {
+              "f1": 0.06837606837606838,
+              "fn": 105,
+              "fp": 4,
+              "mcc": 0.12819985966943956,
+              "pr_auc": 0.250569570911289,
+              "precision": 0.5,
+              "predicted_positive": 8,
+              "recall": 0.03669724770642202,
+              "roc_auc": 0.8150302824581751,
+              "support": 109,
+              "tp": 4
+            },
+            "Vesicle": {
+              "f1": 0.07692307692307693,
+              "fn": 422,
+              "fp": 10,
+              "mcc": 0.13639537401840568,
+              "pr_auc": 0.324833988559264,
+              "precision": 0.6428571428571429,
+              "predicted_positive": 28,
+              "recall": 0.04090909090909091,
+              "roc_auc": 0.7100380251510467,
+              "support": 440,
+              "tp": 18
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        },
+        "43": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.025714285714285714,
+            "hierarchy_inconsistent_proteins": 18,
+            "macro_f1": 0.3478720638351579,
+            "macro_precision": 0.608948045465018,
+            "macro_recall": 0.28943749622071435,
+            "micro_f1": 0.5829487490891424,
+            "micro_precision": 0.7434944237918215,
+            "micro_recall": 0.4794246903715541,
+            "sub_label_positive_proteins": 700
+          },
+          "overall": {
+            "macro_f1": 0.3138500782011689,
+            "macro_precision": 0.6012250895657197,
+            "macro_recall": 0.2529701682164278,
+            "micro_f1": 0.5187855483457502,
+            "micro_precision": 0.6745833333333333,
+            "micro_recall": 0.4214499544448783
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.08860759493670886,
+              "fn": 140,
+              "fp": 4,
+              "mcc": 0.1651491003465477,
+              "pr_auc": 0.2506205178468546,
+              "precision": 0.6363636363636364,
+              "predicted_positive": 11,
+              "recall": 0.047619047619047616,
+              "roc_auc": 0.7787628067540796,
+              "support": 147,
+              "tp": 7
+            },
+            "Cytoplasm": {
+              "f1": 0.5640506329113925,
+              "fn": 420,
+              "fp": 441,
+              "mcc": 0.3531522855969442,
+              "pr_auc": 0.6050205876997342,
+              "precision": 0.5581162324649298,
+              "predicted_positive": 998,
+              "recall": 0.5701125895598772,
+              "roc_auc": 0.7708285196276923,
+              "support": 977,
+              "tp": 557
+            },
+            "Cytoskeleton": {
+              "f1": 0.3657957244655582,
+              "fn": 241,
+              "fp": 26,
+              "mcc": 0.3932985076073319,
+              "pr_auc": 0.4751915876034056,
+              "precision": 0.7475728155339806,
+              "predicted_positive": 103,
+              "recall": 0.24213836477987422,
+              "roc_auc": 0.8185198078395879,
+              "support": 318,
+              "tp": 77
+            },
+            "Cytosol": {
+              "f1": 0.46598202824133506,
+              "fn": 425,
+              "fp": 407,
+              "mcc": 0.2810781736218147,
+              "pr_auc": 0.47871432811967257,
+              "precision": 0.4714285714285714,
+              "predicted_positive": 770,
+              "recall": 0.4606598984771574,
+              "roc_auc": 0.7397910623640318,
+              "support": 788,
+              "tp": 363
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.2979942693409742,
+              "fn": 237,
+              "fp": 8,
+              "mcc": 0.37319448713431486,
+              "pr_auc": 0.551606267617815,
+              "precision": 0.8666666666666667,
+              "predicted_positive": 60,
+              "recall": 0.17993079584775087,
+              "roc_auc": 0.8598306405868835,
+              "support": 289,
+              "tp": 52
+            },
+            "Endosome": {
+              "f1": 0.19402985074626866,
+              "fn": 95,
+              "fp": 13,
+              "mcc": 0.23300398421938384,
+              "pr_auc": 0.2625544213941718,
+              "precision": 0.5,
+              "predicted_positive": 26,
+              "recall": 0.12037037037037036,
+              "roc_auc": 0.8554414003044141,
+              "support": 108,
+              "tp": 13
+            },
+            "Golgi Apparatus": {
+              "f1": 0.2931937172774869,
+              "fn": 231,
+              "fp": 39,
+              "mcc": 0.30394902570308374,
+              "pr_auc": 0.3489910427527237,
+              "precision": 0.5894736842105263,
+              "predicted_positive": 95,
+              "recall": 0.1951219512195122,
+              "roc_auc": 0.776093950807648,
+              "support": 287,
+              "tp": 56
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.08234748023379246,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8139949109414759,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.2222222222222222,
+              "fn": 65,
+              "fp": 5,
+              "mcc": 0.29141070073110537,
+              "pr_auc": 0.3281699904940493,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 15,
+              "recall": 0.13333333333333333,
+              "roc_auc": 0.8587380065470143,
+              "support": 75,
+              "tp": 10
+            },
+            "Mitochondria": {
+              "f1": 0.5729166666666666,
+              "fn": 152,
+              "fp": 12,
+              "mcc": 0.5940587249972638,
+              "pr_auc": 0.5646034419659138,
+              "precision": 0.9016393442622951,
+              "predicted_positive": 122,
+              "recall": 0.4198473282442748,
+              "roc_auc": 0.7926160355019787,
+              "support": 262,
+              "tp": 110
+            },
+            "Nuclear Membrane": {
+              "f1": 0.0,
+              "fn": 76,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.10858297056511756,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.6585321280844387,
+              "support": 76,
+              "tp": 0
+            },
+            "Nucleoli": {
+              "f1": 0.1412639405204461,
+              "fn": 230,
+              "fp": 1,
+              "mcc": 0.2575676930377639,
+              "pr_auc": 0.30677983741121245,
+              "precision": 0.95,
+              "predicted_positive": 20,
+              "recall": 0.07630522088353414,
+              "roc_auc": 0.7334447541876755,
+              "support": 249,
+              "tp": 19
+            },
+            "Nucleoplasm": {
+              "f1": 0.6125290023201856,
+              "fn": 500,
+              "fp": 168,
+              "mcc": 0.48353266232982195,
+              "pr_auc": 0.7228514544568221,
+              "precision": 0.7586206896551724,
+              "predicted_positive": 696,
+              "recall": 0.5136186770428015,
+              "roc_auc": 0.8149494163424125,
+              "support": 1028,
+              "tp": 528
+            },
+            "Nucleus": {
+              "f1": 0.6376953125,
+              "fn": 497,
+              "fp": 245,
+              "mcc": 0.46474625702503536,
+              "pr_auc": 0.7532405753150353,
+              "precision": 0.7271714922048997,
+              "predicted_positive": 898,
+              "recall": 0.5678260869565217,
+              "roc_auc": 0.814653887113951,
+              "support": 1150,
+              "tp": 653
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.134511254647793,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8351524374245685,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.6792215944758319,
+              "fn": 351,
+              "fp": 160,
+              "mcc": 0.5745230444025295,
+              "pr_auc": 0.7685061303177481,
+              "precision": 0.7717546362339515,
+              "predicted_positive": 701,
+              "recall": 0.6065022421524664,
+              "roc_auc": 0.8586050473623217,
+              "support": 892,
+              "tp": 541
+            },
+            "Primary Cilium": {
+              "f1": 0.19895287958115182,
+              "fn": 142,
+              "fp": 11,
+              "mcc": 0.2586567822565722,
+              "pr_auc": 0.3638540488925135,
+              "precision": 0.6333333333333333,
+              "predicted_positive": 30,
+              "recall": 0.11801242236024845,
+              "roc_auc": 0.85742124453245,
+              "support": 161,
+              "tp": 19
+            },
+            "Secreted Proteins": {
+              "f1": 0.8333333333333333,
+              "fn": 73,
+              "fp": 15,
+              "mcc": 0.823596089173896,
+              "pr_auc": 0.8872832409400025,
+              "precision": 0.9361702127659575,
+              "predicted_positive": 235,
+              "recall": 0.7508532423208191,
+              "roc_auc": 0.9675150214324487,
+              "support": 293,
+              "tp": 220
+            },
+            "Sperm": {
+              "f1": 0.06956521739130435,
+              "fn": 105,
+              "fp": 2,
+              "mcc": 0.1508535956692988,
+              "pr_auc": 0.24296374728465217,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 6,
+              "recall": 0.03669724770642202,
+              "roc_auc": 0.819769872175654,
+              "support": 109,
+              "tp": 4
+            },
+            "Vesicle": {
+              "f1": 0.03964757709251101,
+              "fn": 431,
+              "fp": 5,
+              "mcc": 0.09622183759764347,
+              "pr_auc": 0.2955666349875806,
+              "precision": 0.6428571428571429,
+              "predicted_positive": 14,
+              "recall": 0.020454545454545454,
+              "roc_auc": 0.6990151222425179,
+              "support": 440,
+              "tp": 9
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        },
+        "44": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.016296296296296295,
+            "hierarchy_inconsistent_proteins": 11,
+            "macro_f1": 0.34211759704080147,
+            "macro_precision": 0.614982928494781,
+            "macro_recall": 0.2802149487817621,
+            "micro_f1": 0.577084879980203,
+            "micro_precision": 0.7581274382314694,
+            "micro_recall": 0.46584099081102676,
+            "sub_label_positive_proteins": 675
+          },
+          "overall": {
+            "macro_f1": 0.2917230715672798,
+            "macro_precision": 0.6253135275703706,
+            "macro_recall": 0.23258176328142244,
+            "micro_f1": 0.5034745201853077,
+            "micro_precision": 0.6908059023836549,
+            "micro_recall": 0.3960692437849798
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.0522875816993464,
+              "fn": 143,
+              "fp": 2,
+              "mcc": 0.1281523588713967,
+              "pr_auc": 0.25329290562110846,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 6,
+              "recall": 0.027210884353741496,
+              "roc_auc": 0.7795609045423098,
+              "support": 147,
+              "tp": 4
+            },
+            "Cytoplasm": {
+              "f1": 0.5586061246040126,
+              "fn": 448,
+              "fp": 388,
+              "mcc": 0.35841496209292056,
+              "pr_auc": 0.6016309390114165,
+              "precision": 0.5768811341330425,
+              "predicted_positive": 917,
+              "recall": 0.5414534288638689,
+              "roc_auc": 0.7711970644172377,
+              "support": 977,
+              "tp": 529
+            },
+            "Cytoskeleton": {
+              "f1": 0.20273972602739726,
+              "fn": 281,
+              "fp": 10,
+              "mcc": 0.27941285227717205,
+              "pr_auc": 0.47011011391883833,
+              "precision": 0.7872340425531915,
+              "predicted_positive": 47,
+              "recall": 0.11635220125786164,
+              "roc_auc": 0.8202992643133978,
+              "support": 318,
+              "tp": 37
+            },
+            "Cytosol": {
+              "f1": 0.44836956521739135,
+              "fn": 458,
+              "fp": 354,
+              "mcc": 0.27358856248464186,
+              "pr_auc": 0.48320884488282223,
+              "precision": 0.4824561403508772,
+              "predicted_positive": 684,
+              "recall": 0.41878172588832485,
+              "roc_auc": 0.7424713333937637,
+              "support": 788,
+              "tp": 330
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.25301204819277107,
+              "fn": 247,
+              "fp": 1,
+              "mcc": 0.35999591811704823,
+              "pr_auc": 0.5681829680128396,
+              "precision": 0.9767441860465116,
+              "predicted_positive": 43,
+              "recall": 0.1453287197231834,
+              "roc_auc": 0.858077165535372,
+              "support": 289,
+              "tp": 42
+            },
+            "Endosome": {
+              "f1": 0.16541353383458648,
+              "fn": 97,
+              "fp": 14,
+              "mcc": 0.19892253210790237,
+              "pr_auc": 0.21515836299397922,
+              "precision": 0.44,
+              "predicted_positive": 25,
+              "recall": 0.10185185185185185,
+              "roc_auc": 0.8536307711821409,
+              "support": 108,
+              "tp": 11
+            },
+            "Golgi Apparatus": {
+              "f1": 0.2894736842105263,
+              "fn": 232,
+              "fp": 38,
+              "mcc": 0.3017994000208645,
+              "pr_auc": 0.338066501270737,
+              "precision": 0.5913978494623656,
+              "predicted_positive": 93,
+              "recall": 0.1916376306620209,
+              "roc_auc": 0.7758683153100359,
+              "support": 287,
+              "tp": 55
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.03723533661237051,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7687797322712688,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.2298850574712644,
+              "fn": 65,
+              "fp": 2,
+              "mcc": 0.32815811219542557,
+              "pr_auc": 0.32602759806659065,
+              "precision": 0.8333333333333334,
+              "predicted_positive": 12,
+              "recall": 0.13333333333333333,
+              "roc_auc": 0.8636663280279941,
+              "support": 75,
+              "tp": 10
+            },
+            "Mitochondria": {
+              "f1": 0.5662337662337663,
+              "fn": 153,
+              "fp": 14,
+              "mcc": 0.5852753738457275,
+              "pr_auc": 0.5702430564505138,
+              "precision": 0.8861788617886179,
+              "predicted_positive": 123,
+              "recall": 0.41603053435114506,
+              "roc_auc": 0.8045776688579425,
+              "support": 262,
+              "tp": 109
+            },
+            "Nuclear Membrane": {
+              "f1": 0.0,
+              "fn": 76,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.08431230093414506,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.6386437384110684,
+              "support": 76,
+              "tp": 0
+            },
+            "Nucleoli": {
+              "f1": 0.1273408239700375,
+              "fn": 232,
+              "fp": 1,
+              "mcc": 0.242705135172518,
+              "pr_auc": 0.32706460483552513,
+              "precision": 0.9444444444444444,
+              "predicted_positive": 18,
+              "recall": 0.06827309236947791,
+              "roc_auc": 0.7546934770387776,
+              "support": 249,
+              "tp": 17
+            },
+            "Nucleoplasm": {
+              "f1": 0.6101295641931684,
+              "fn": 510,
+              "fp": 152,
+              "mcc": 0.4881299515210111,
+              "pr_auc": 0.7283313758635457,
+              "precision": 0.7731343283582089,
+              "predicted_positive": 670,
+              "recall": 0.5038910505836576,
+              "roc_auc": 0.8193073929961089,
+              "support": 1028,
+              "tp": 518
+            },
+            "Nucleus": {
+              "f1": 0.631,
+              "fn": 519,
+              "fp": 219,
+              "mcc": 0.4666859464294683,
+              "pr_auc": 0.7586463291327993,
+              "precision": 0.7423529411764705,
+              "predicted_positive": 850,
+              "recall": 0.548695652173913,
+              "roc_auc": 0.8185974903921841,
+              "support": 1150,
+              "tp": 631
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.1235890405683049,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8470290881740742,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.6584415584415584,
+              "fn": 385,
+              "fp": 141,
+              "mcc": 0.5583860793833222,
+              "pr_auc": 0.7678704015191125,
+              "precision": 0.7824074074074074,
+              "predicted_positive": 648,
+              "recall": 0.5683856502242153,
+              "roc_auc": 0.8596405733024304,
+              "support": 892,
+              "tp": 507
+            },
+            "Primary Cilium": {
+              "f1": 0.14606741573033707,
+              "fn": 148,
+              "fp": 4,
+              "mcc": 0.23828391422333103,
+              "pr_auc": 0.3606435711114846,
+              "precision": 0.7647058823529411,
+              "predicted_positive": 17,
+              "recall": 0.08074534161490683,
+              "roc_auc": 0.8591175661359614,
+              "support": 161,
+              "tp": 13
+            },
+            "Secreted Proteins": {
+              "f1": 0.8330206378986867,
+              "fn": 71,
+              "fp": 18,
+              "mcc": 0.8219719096737239,
+              "pr_auc": 0.8869711281421823,
+              "precision": 0.925,
+              "predicted_positive": 240,
+              "recall": 0.757679180887372,
+              "roc_auc": 0.9642673970961683,
+              "support": 293,
+              "tp": 222
+            },
+            "Sperm": {
+              "f1": 0.03571428571428572,
+              "fn": 107,
+              "fp": 1,
+              "mcc": 0.10661669332664972,
+              "pr_auc": 0.23511295833245588,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 3,
+              "recall": 0.01834862385321101,
+              "roc_auc": 0.8166127648340045,
+              "support": 109,
+              "tp": 2
+            },
+            "Vesicle": {
+              "f1": 0.026726057906458798,
+              "fn": 434,
+              "fp": 3,
+              "mcc": 0.0807740135587387,
+              "pr_auc": 0.3040054932087233,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 9,
+              "recall": 0.013636363636363636,
+              "roc_auc": 0.7020022481382604,
+              "support": 440,
+              "tp": 6
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        }
+      }
+    },
+    "middleclip1022": {
+      "mean_sd": {
+        "Nuclear Membrane_f1": {
+          "mean": 0.008547008547008546,
+          "sd": 0.014803853056144248
+        },
+        "Nuclear Membrane_mcc": {
+          "mean": 0.02601675903651228,
+          "sd": 0.04506234849951598
+        },
+        "Nuclear Membrane_pr_auc": {
+          "mean": 0.07035810202970179,
+          "sd": 0.012684459078742319
+        },
+        "Nuclear Membrane_precision": {
+          "mean": 0.16666666666666666,
+          "sd": 0.2886751345948129
+        },
+        "Nuclear Membrane_recall": {
+          "mean": 0.0043859649122807015,
+          "sd": 0.007596714068284549
+        },
+        "Nuclear Membrane_roc_auc": {
+          "mean": 0.6505483941900824,
+          "sd": 0.007318625456521349
+        },
+        "Nucleoli_f1": {
+          "mean": 0.22182062807964567,
+          "sd": 0.009799547322618975
+        },
+        "Nucleoli_mcc": {
+          "mean": 0.27187516739949513,
+          "sd": 0.00807771547020118
+        },
+        "Nucleoli_pr_auc": {
+          "mean": 0.30504688104621086,
+          "sd": 0.014171567195739955
+        },
+        "Nucleoli_precision": {
+          "mean": 0.654724111866969,
+          "sd": 0.055574217483544415
+        },
+        "Nucleoli_recall": {
+          "mean": 0.13386880856760372,
+          "sd": 0.009274703119512064
+        },
+        "Nucleoli_roc_auc": {
+          "mean": 0.747986066853476,
+          "sd": 0.011117143026066468
+        },
+        "Nucleoplasm_f1": {
+          "mean": 0.6124962479204658,
+          "sd": 0.024922186291976258
+        },
+        "Nucleoplasm_mcc": {
+          "mean": 0.4834146729446756,
+          "sd": 0.0031749251596522427
+        },
+        "Nucleoplasm_pr_auc": {
+          "mean": 0.7294231255624588,
+          "sd": 0.0010340455560653014
+        },
+        "Nucleoplasm_precision": {
+          "mean": 0.7570817116829085,
+          "sd": 0.049013496580572455
+        },
+        "Nucleoplasm_recall": {
+          "mean": 0.5188067444876784,
+          "sd": 0.0600781024233512
+        },
+        "Nucleoplasm_roc_auc": {
+          "mean": 0.8225986543450065,
+          "sd": 0.0007082789440760168
+        },
+        "Nucleus_f1": {
+          "mean": 0.6315881946757793,
+          "sd": 0.004582609091586151
+        },
+        "Nucleus_mcc": {
+          "mean": 0.4667833084826049,
+          "sd": 0.0041870392337153405
+        },
+        "Nucleus_pr_auc": {
+          "mean": 0.7551503630147337,
+          "sd": 0.0016973322170202758
+        },
+        "Nucleus_precision": {
+          "mean": 0.7415111427687463,
+          "sd": 0.0071264830501701305
+        },
+        "Nucleus_recall": {
+          "mean": 0.5501449275362319,
+          "sd": 0.009297979670924866
+        },
+        "Nucleus_roc_auc": {
+          "mean": 0.8196514176351654,
+          "sd": 0.0008351103883083513
+        },
+        "macro_f1": {
+          "mean": 0.3008396460034947,
+          "sd": 0.035251779956106434
+        },
+        "micro_f1": {
+          "mean": 0.49860772068150494,
+          "sd": 0.022996708616414188
+        },
+        "nuclear_family_macro_f1": {
+          "mean": 0.36861301980572475,
+          "sd": 0.010843779927443491
+        },
+        "nuclear_family_micro_f1": {
+          "mean": 0.5822624933572356,
+          "sd": 0.014396346214235755
+        }
+      },
+      "seeds": {
+        "42": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.014204545454545454,
+            "hierarchy_inconsistent_proteins": 10,
+            "macro_f1": 0.3676532878266374,
+            "macro_precision": 0.523987692788096,
+            "macro_recall": 0.3004040098815156,
+            "micro_f1": 0.5792163543441227,
+            "micro_precision": 0.7409713574097135,
+            "micro_recall": 0.47542948461845785,
+            "sub_label_positive_proteins": 704
+          },
+          "overall": {
+            "macro_f1": 0.29478303215979174,
+            "macro_precision": 0.5936066797489172,
+            "macro_recall": 0.22889869374577282,
+            "micro_f1": 0.4897505978817902,
+            "micro_precision": 0.7122981366459628,
+            "micro_recall": 0.3731615254457894
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.039473684210526314,
+              "fn": 144,
+              "fp": 2,
+              "mcc": 0.10435183460542691,
+              "pr_auc": 0.24007743198865192,
+              "precision": 0.6,
+              "predicted_positive": 5,
+              "recall": 0.02040816326530612,
+              "roc_auc": 0.7788312825998154,
+              "support": 147,
+              "tp": 3
+            },
+            "Cytoplasm": {
+              "f1": 0.5207723815096548,
+              "fn": 532,
+              "fp": 287,
+              "mcc": 0.3445472912745319,
+              "pr_auc": 0.6145621083626176,
+              "precision": 0.6079234972677595,
+              "predicted_positive": 732,
+              "recall": 0.4554759467758444,
+              "roc_auc": 0.7792037436365515,
+              "support": 977,
+              "tp": 445
+            },
+            "Cytoskeleton": {
+              "f1": 0.21857923497267762,
+              "fn": 278,
+              "fp": 8,
+              "mcc": 0.3015008376367769,
+              "pr_auc": 0.42732323123869675,
+              "precision": 0.8333333333333334,
+              "predicted_positive": 48,
+              "recall": 0.12578616352201258,
+              "roc_auc": 0.8055994569379656,
+              "support": 318,
+              "tp": 40
+            },
+            "Cytosol": {
+              "f1": 0.39082278481012667,
+              "fn": 541,
+              "fp": 229,
+              "mcc": 0.2546112516404284,
+              "pr_auc": 0.4801234109078542,
+              "precision": 0.5189075630252101,
+              "predicted_positive": 476,
+              "recall": 0.3134517766497462,
+              "roc_auc": 0.7469976545503988,
+              "support": 788,
+              "tp": 247
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.48130841121495327,
+              "fn": 186,
+              "fp": 36,
+              "mcc": 0.4819303852393282,
+              "pr_auc": 0.5626654190152399,
+              "precision": 0.7410071942446043,
+              "predicted_positive": 139,
+              "recall": 0.356401384083045,
+              "roc_auc": 0.8672336404441293,
+              "support": 289,
+              "tp": 103
+            },
+            "Endosome": {
+              "f1": 0.11290322580645161,
+              "fn": 101,
+              "fp": 9,
+              "mcc": 0.15791760871091312,
+              "pr_auc": 0.241662688071394,
+              "precision": 0.4375,
+              "predicted_positive": 16,
+              "recall": 0.06481481481481481,
+              "roc_auc": 0.8605070395738204,
+              "support": 108,
+              "tp": 7
+            },
+            "Golgi Apparatus": {
+              "f1": 0.20771513353115725,
+              "fn": 252,
+              "fp": 15,
+              "mcc": 0.26772866445404475,
+              "pr_auc": 0.3573140520509823,
+              "precision": 0.7,
+              "predicted_positive": 50,
+              "recall": 0.12195121951219512,
+              "roc_auc": 0.7684223438888373,
+              "support": 287,
+              "tp": 35
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.22865381581243738,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7745547073791349,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.1686746987951807,
+              "fn": 68,
+              "fp": 1,
+              "mcc": 0.2815607173436429,
+              "pr_auc": 0.32916917677005403,
+              "precision": 0.875,
+              "predicted_positive": 8,
+              "recall": 0.09333333333333334,
+              "roc_auc": 0.881004628061858,
+              "support": 75,
+              "tp": 7
+            },
+            "Mitochondria": {
+              "f1": 0.5549738219895288,
+              "fn": 156,
+              "fp": 14,
+              "mcc": 0.5757394819318401,
+              "pr_auc": 0.5663265013768921,
+              "precision": 0.8833333333333333,
+              "predicted_positive": 120,
+              "recall": 0.40458015267175573,
+              "roc_auc": 0.8109527909787881,
+              "support": 262,
+              "tp": 106
+            },
+            "Nuclear Membrane": {
+              "f1": 0.0,
+              "fn": 76,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.07246370813003569,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.6580641135358722,
+              "support": 76,
+              "tp": 0
+            },
+            "Nucleoli": {
+              "f1": 0.23300970873786409,
+              "fn": 213,
+              "fp": 24,
+              "mcc": 0.2679726000328064,
+              "pr_auc": 0.3206383527268467,
+              "precision": 0.6,
+              "predicted_positive": 60,
+              "recall": 0.14457831325301204,
+              "roc_auc": 0.7561501854846518,
+              "support": 249,
+              "tp": 36
+            },
+            "Nucleoplasm": {
+              "f1": 0.607017543859649,
+              "fn": 509,
+              "fp": 163,
+              "mcc": 0.4799202754035537,
+              "pr_auc": 0.729759462933035,
+              "precision": 0.7609970674486803,
+              "predicted_positive": 682,
+              "recall": 0.504863813229572,
+              "roc_auc": 0.8223030155642024,
+              "support": 1028,
+              "tp": 519
+            },
+            "Nucleus": {
+              "f1": 0.6305858987090367,
+              "fn": 515,
+              "fp": 229,
+              "mcc": 0.46239980229224426,
+              "pr_auc": 0.755346933244556,
+              "precision": 0.7349537037037037,
+              "predicted_positive": 864,
+              "recall": 0.5521739130434783,
+              "roc_auc": 0.8193918136778257,
+              "support": 1150,
+              "tp": 635
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.11474405018294408,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7809466337828619,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.5991379310344828,
+              "fn": 475,
+              "fp": 83,
+              "mcc": 0.5262513278198622,
+              "pr_auc": 0.7650420755300359,
+              "precision": 0.834,
+              "predicted_positive": 500,
+              "recall": 0.4674887892376682,
+              "roc_auc": 0.8620987008951815,
+              "support": 892,
+              "tp": 417
+            },
+            "Primary Cilium": {
+              "f1": 0.12429378531073447,
+              "fn": 150,
+              "fp": 5,
+              "mcc": 0.20605187221406843,
+              "pr_auc": 0.35920909252786176,
+              "precision": 0.6875,
+              "predicted_positive": 16,
+              "recall": 0.06832298136645963,
+              "roc_auc": 0.856453929595071,
+              "support": 161,
+              "tp": 11
+            },
+            "Secreted Proteins": {
+              "f1": 0.817857142857143,
+              "fn": 64,
+              "fp": 38,
+              "mcc": 0.8003899083019772,
+              "pr_auc": 0.8781025945717539,
+              "precision": 0.8576779026217228,
+              "predicted_positive": 267,
+              "recall": 0.7815699658703071,
+              "roc_auc": 0.9688602429634805,
+              "support": 293,
+              "tp": 229
+            },
+            "Sperm": {
+              "f1": 0.09917355371900827,
+              "fn": 103,
+              "fp": 6,
+              "mcc": 0.1571162055871769,
+              "pr_auc": 0.22380539875753486,
+              "precision": 0.5,
+              "predicted_positive": 12,
+              "recall": 0.05504587155963303,
+              "roc_auc": 0.8092315138714716,
+              "support": 109,
+              "tp": 6
+            },
+            "Vesicle": {
+              "f1": 0.08936170212765958,
+              "fn": 419,
+              "fp": 9,
+              "mcc": 0.15744983317841227,
+              "pr_auc": 0.3144679281007724,
+              "precision": 0.7,
+              "predicted_positive": 30,
+              "recall": 0.04772727272727273,
+              "roc_auc": 0.7034929570043557,
+              "support": 440,
+              "tp": 21
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        },
+        "43": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.0,
+            "hierarchy_inconsistent_proteins": 0,
+            "macro_f1": 0.3582810058009722,
+            "macro_precision": 0.551544155132275,
+            "macro_recall": 0.2838600315659525,
+            "micro_f1": 0.5696329813976873,
+            "micro_precision": 0.768135593220339,
+            "micro_recall": 0.452656811825809,
+            "sub_label_positive_proteins": 617
+          },
+          "overall": {
+            "macro_f1": 0.26900857740548145,
+            "macro_precision": 0.5703415614428573,
+            "macro_recall": 0.2114511969799003,
+            "micro_f1": 0.48135651872999385,
+            "micro_precision": 0.717750257997936,
+            "micro_recall": 0.36209813874788493
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.05298013245033112,
+              "fn": 143,
+              "fp": 0,
+              "mcc": 0.1610097086025011,
+              "pr_auc": 0.23975324816791171,
+              "precision": 1.0,
+              "predicted_positive": 4,
+              "recall": 0.027210884353741496,
+              "roc_auc": 0.7803578217125101,
+              "support": 147,
+              "tp": 4
+            },
+            "Cytoplasm": {
+              "f1": 0.5255813953488373,
+              "fn": 525,
+              "fp": 291,
+              "mcc": 0.3484745659081555,
+              "pr_auc": 0.6128783342578139,
+              "precision": 0.6083445491251682,
+              "predicted_positive": 743,
+              "recall": 0.4626407369498465,
+              "roc_auc": 0.7803929680556254,
+              "support": 977,
+              "tp": 452
+            },
+            "Cytoskeleton": {
+              "f1": 0.169971671388102,
+              "fn": 288,
+              "fp": 5,
+              "mcc": 0.2652938748939208,
+              "pr_auc": 0.4284433601394625,
+              "precision": 0.8571428571428571,
+              "predicted_positive": 35,
+              "recall": 0.09433962264150944,
+              "roc_auc": 0.8090156420432129,
+              "support": 318,
+              "tp": 30
+            },
+            "Cytosol": {
+              "f1": 0.41923365890308034,
+              "fn": 509,
+              "fp": 264,
+              "mcc": 0.27015364599842423,
+              "pr_auc": 0.48818728834758573,
+              "precision": 0.5138121546961326,
+              "predicted_positive": 543,
+              "recall": 0.35406091370558374,
+              "roc_auc": 0.7501710931834663,
+              "support": 788,
+              "tp": 279
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.4411027568922306,
+              "fn": 201,
+              "fp": 22,
+              "mcc": 0.46556578078585525,
+              "pr_auc": 0.5515183479254442,
+              "precision": 0.8,
+              "predicted_positive": 110,
+              "recall": 0.3044982698961938,
+              "roc_auc": 0.8672841728663632,
+              "support": 289,
+              "tp": 88
+            },
+            "Endosome": {
+              "f1": 0.017391304347826087,
+              "fn": 107,
+              "fp": 6,
+              "mcc": 0.02782150638009859,
+              "pr_auc": 0.2009825217051149,
+              "precision": 0.14285714285714285,
+              "predicted_positive": 7,
+              "recall": 0.009259259259259259,
+              "roc_auc": 0.8532994038559107,
+              "support": 108,
+              "tp": 1
+            },
+            "Golgi Apparatus": {
+              "f1": 0.13793103448275862,
+              "fn": 265,
+              "fp": 10,
+              "mcc": 0.20912819089162213,
+              "pr_auc": 0.3433702964865247,
+              "precision": 0.6875,
+              "predicted_positive": 32,
+              "recall": 0.07665505226480836,
+              "roc_auc": 0.76608717538679,
+              "support": 287,
+              "tp": 22
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.10324422345377872,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7654386547184424,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.0,
+              "fn": 75,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.22851844837491772,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8690348797832713,
+              "support": 75,
+              "tp": 0
+            },
+            "Mitochondria": {
+              "f1": 0.568421052631579,
+              "fn": 154,
+              "fp": 10,
+              "mcc": 0.5935890888089549,
+              "pr_auc": 0.569350453141223,
+              "precision": 0.9152542372881356,
+              "predicted_positive": 118,
+              "recall": 0.4122137404580153,
+              "roc_auc": 0.8115896132425913,
+              "support": 262,
+              "tp": 108
+            },
+            "Nuclear Membrane": {
+              "f1": 0.0,
+              "fn": 76,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.056752597304876674,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.650136838539438,
+              "support": 76,
+              "tp": 0
+            },
+            "Nucleoli": {
+              "f1": 0.21476510067114093,
+              "fn": 217,
+              "fp": 17,
+              "mcc": 0.26648976496587434,
+              "pr_auc": 0.30155379844631586,
+              "precision": 0.6530612244897959,
+              "predicted_positive": 49,
+              "recall": 0.1285140562248996,
+              "roc_auc": 0.7524831242927811,
+              "support": 249,
+              "tp": 32
+            },
+            "Nucleoplasm": {
+              "f1": 0.5907692307692308,
+              "fn": 548,
+              "fp": 117,
+              "mcc": 0.4861221004056243,
+              "pr_auc": 0.7302471302954217,
+              "precision": 0.8040201005025126,
+              "predicted_positive": 597,
+              "recall": 0.4669260700389105,
+              "roc_auc": 0.8234068579766537,
+              "support": 1028,
+              "tp": 480
+            },
+            "Nucleus": {
+              "f1": 0.627589691763517,
+              "fn": 529,
+              "fp": 208,
+              "mcc": 0.46720872280677495,
+              "pr_auc": 0.7533633041543207,
+              "precision": 0.7490952955367913,
+              "predicted_positive": 829,
+              "recall": 0.54,
+              "roc_auc": 0.8189769412418392,
+              "support": 1150,
+              "tp": 621
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.1505637071481804,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.781873677213972,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.5929648241206029,
+              "fn": 479,
+              "fp": 88,
+              "mcc": 0.5174570430728568,
+              "pr_auc": 0.7611644427922618,
+              "precision": 0.8243512974051896,
+              "predicted_positive": 501,
+              "recall": 0.46300448430493274,
+              "roc_auc": 0.8599880229589694,
+              "support": 892,
+              "tp": 413
+            },
+            "Primary Cilium": {
+              "f1": 0.07142857142857142,
+              "fn": 155,
+              "fp": 1,
+              "mcc": 0.17248205161247035,
+              "pr_auc": 0.3439024924632778,
+              "precision": 0.8571428571428571,
+              "predicted_positive": 7,
+              "recall": 0.037267080745341616,
+              "roc_auc": 0.8549070922707962,
+              "support": 161,
+              "tp": 6
+            },
+            "Secreted Proteins": {
+              "f1": 0.8063943161634103,
+              "fn": 66,
+              "fp": 43,
+              "mcc": 0.78738615309507,
+              "pr_auc": 0.8702709134861383,
+              "precision": 0.8407407407407408,
+              "predicted_positive": 270,
+              "recall": 0.7747440273037542,
+              "roc_auc": 0.967184955481653,
+              "support": 293,
+              "tp": 227
+            },
+            "Sperm": {
+              "f1": 0.08264462809917356,
+              "fn": 104,
+              "fp": 7,
+              "mcc": 0.12889865692063052,
+              "pr_auc": 0.2228030706867326,
+              "precision": 0.4166666666666667,
+              "predicted_positive": 12,
+              "recall": 0.045871559633027525,
+              "roc_auc": 0.7971436743134981,
+              "support": 109,
+              "tp": 5
+            },
+            "Vesicle": {
+              "f1": 0.06100217864923746,
+              "fn": 426,
+              "fp": 5,
+              "mcc": 0.13338012004915029,
+              "pr_auc": 0.31414849046831306,
+              "precision": 0.7368421052631579,
+              "predicted_positive": 19,
+              "recall": 0.031818181818181815,
+              "roc_auc": 0.7014705107489111,
+              "support": 440,
+              "tp": 14
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        },
+        "44": {
+          "nuclear_family": {
+            "hierarchy_inconsistency_rate": 0.060324825986078884,
+            "hierarchy_inconsistent_proteins": 52,
+            "macro_f1": 0.3799047657895648,
+            "macro_precision": 0.6644558768185969,
+            "macro_recall": 0.3211407926803779,
+            "micro_f1": 0.5979381443298969,
+            "micro_precision": 0.7229461756373937,
+            "micro_recall": 0.5097882540950859,
+            "sub_label_positive_proteins": 862
+          },
+          "overall": {
+            "macro_f1": 0.338727328445211,
+            "macro_precision": 0.579443335235941,
+            "macro_recall": 0.27757167944288996,
+            "micro_f1": 0.5247160454327308,
+            "micro_precision": 0.6806391367503631,
+            "micro_recall": 0.42691656904854874
+          },
+          "per_label": {
+            "Centrosome": {
+              "f1": 0.14285714285714285,
+              "fn": 135,
+              "fp": 9,
+              "mcc": 0.20331617468396146,
+              "pr_auc": 0.24324302691479732,
+              "precision": 0.5714285714285714,
+              "predicted_positive": 21,
+              "recall": 0.08163265306122448,
+              "roc_auc": 0.7711643491134739,
+              "support": 147,
+              "tp": 12
+            },
+            "Cytoplasm": {
+              "f1": 0.5631174533479693,
+              "fn": 464,
+              "fp": 332,
+              "mcc": 0.3785525013065698,
+              "pr_auc": 0.6225517787706093,
+              "precision": 0.6071005917159763,
+              "predicted_positive": 845,
+              "recall": 0.5250767656090072,
+              "roc_auc": 0.779137370641278,
+              "support": 977,
+              "tp": 513
+            },
+            "Cytoskeleton": {
+              "f1": 0.35680751173708924,
+              "fn": 242,
+              "fp": 32,
+              "mcc": 0.37555685048231724,
+              "pr_auc": 0.4642932316398599,
+              "precision": 0.7037037037037037,
+              "predicted_positive": 108,
+              "recall": 0.2389937106918239,
+              "roc_auc": 0.8164212444011232,
+              "support": 318,
+              "tp": 76
+            },
+            "Cytosol": {
+              "f1": 0.44494047619047616,
+              "fn": 489,
+              "fp": 257,
+              "mcc": 0.29998185495943186,
+              "pr_auc": 0.4857571910460469,
+              "precision": 0.5377697841726619,
+              "predicted_positive": 556,
+              "recall": 0.37944162436548223,
+              "roc_auc": 0.7471831943437275,
+              "support": 788,
+              "tp": 299
+            },
+            "Endoplasmic Reticulum": {
+              "f1": 0.4694835680751174,
+              "fn": 189,
+              "fp": 37,
+              "mcc": 0.4700760970411278,
+              "pr_auc": 0.5612340691639163,
+              "precision": 0.7299270072992701,
+              "predicted_positive": 137,
+              "recall": 0.3460207612456747,
+              "roc_auc": 0.8616504394425769,
+              "support": 289,
+              "tp": 100
+            },
+            "Endosome": {
+              "f1": 0.30366492146596863,
+              "fn": 79,
+              "fp": 54,
+              "mcc": 0.28399172298027797,
+              "pr_auc": 0.26340708427531084,
+              "precision": 0.3493975903614458,
+              "predicted_positive": 83,
+              "recall": 0.26851851851851855,
+              "roc_auc": 0.8585315195332318,
+              "support": 108,
+              "tp": 29
+            },
+            "Golgi Apparatus": {
+              "f1": 0.2666666666666667,
+              "fn": 239,
+              "fp": 25,
+              "mcc": 0.3019675692636059,
+              "pr_auc": 0.35706060494353925,
+              "precision": 0.6575342465753424,
+              "predicted_positive": 73,
+              "recall": 0.1672473867595819,
+              "roc_auc": 0.7792204325337151,
+              "support": 287,
+              "tp": 48
+            },
+            "Lipid droplet": {
+              "f1": 0.0,
+              "fn": 15,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.19046717846284694,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.7377475384445182,
+              "support": 15,
+              "tp": 0
+            },
+            "Lysosome/Vacuole": {
+              "f1": 0.3076923076923077,
+              "fn": 59,
+              "fp": 13,
+              "mcc": 0.33340957648046304,
+              "pr_auc": 0.3153758377482288,
+              "precision": 0.5517241379310345,
+              "predicted_positive": 29,
+              "recall": 0.21333333333333335,
+              "roc_auc": 0.8625330172705723,
+              "support": 75,
+              "tp": 16
+            },
+            "Mitochondria": {
+              "f1": 0.5684754521963824,
+              "fn": 152,
+              "fp": 15,
+              "mcc": 0.5856571613084564,
+              "pr_auc": 0.57983545046013,
+              "precision": 0.88,
+              "predicted_positive": 125,
+              "recall": 0.4198473282442748,
+              "roc_auc": 0.8017171432829395,
+              "support": 262,
+              "tp": 110
+            },
+            "Nuclear Membrane": {
+              "f1": 0.025641025641025637,
+              "fn": 75,
+              "fp": 1,
+              "mcc": 0.07805027710953684,
+              "pr_auc": 0.081858000654193,
+              "precision": 0.5,
+              "predicted_positive": 2,
+              "recall": 0.013157894736842105,
+              "roc_auc": 0.6434442304949366,
+              "support": 76,
+              "tp": 1
+            },
+            "Nucleoli": {
+              "f1": 0.217687074829932,
+              "fn": 217,
+              "fp": 13,
+              "mcc": 0.2811631371998047,
+              "pr_auc": 0.2929484919654701,
+              "precision": 0.7111111111111111,
+              "predicted_positive": 45,
+              "recall": 0.1285140562248996,
+              "roc_auc": 0.7353248907829952,
+              "support": 249,
+              "tp": 32
+            },
+            "Nucleoplasm": {
+              "f1": 0.6397019691325173,
+              "fn": 427,
+              "fp": 250,
+              "mcc": 0.4842016430248487,
+              "pr_auc": 0.7282627834589197,
+              "precision": 0.7062279670975323,
+              "predicted_positive": 851,
+              "recall": 0.5846303501945526,
+              "roc_auc": 0.8220860894941634,
+              "support": 1028,
+              "tp": 601
+            },
+            "Nucleus": {
+              "f1": 0.6365889935547843,
+              "fn": 508,
+              "fp": 225,
+              "mcc": 0.47074140034879547,
+              "pr_auc": 0.756740851645324,
+              "precision": 0.740484429065744,
+              "predicted_positive": 867,
+              "recall": 0.5582608695652174,
+              "roc_auc": 0.8205854979858314,
+              "support": 1150,
+              "tp": 642
+            },
+            "Peroxisome": {
+              "f1": 0.0,
+              "fn": 19,
+              "fp": 0,
+              "mcc": 0.0,
+              "pr_auc": 0.10869032324581349,
+              "precision": 0.0,
+              "predicted_positive": 0,
+              "recall": 0.0,
+              "roc_auc": 0.8257770548005108,
+              "support": 19,
+              "tp": 0
+            },
+            "Plasma Membrane/Cell Membrane": {
+              "f1": 0.6520900321543409,
+              "fn": 385,
+              "fp": 156,
+              "mcc": 0.5460401595724536,
+              "pr_auc": 0.7615571910274932,
+              "precision": 0.7647058823529411,
+              "predicted_positive": 663,
+              "recall": 0.5683856502242153,
+              "roc_auc": 0.8621267802858534,
+              "support": 892,
+              "tp": 507
+            },
+            "Primary Cilium": {
+              "f1": 0.22,
+              "fn": 139,
+              "fp": 17,
+              "mcc": 0.2601127660474704,
+              "pr_auc": 0.38465232607193844,
+              "precision": 0.5641025641025641,
+              "predicted_positive": 39,
+              "recall": 0.13664596273291926,
+              "roc_auc": 0.8672016326283019,
+              "support": 161,
+              "tp": 22
+            },
+            "Secreted Proteins": {
+              "f1": 0.7819063004846526,
+              "fn": 51,
+              "fp": 84,
+              "mcc": 0.7584926004255039,
+              "pr_auc": 0.8771295322363892,
+              "precision": 0.7423312883435583,
+              "predicted_positive": 326,
+              "recall": 0.825938566552901,
+              "roc_auc": 0.9690960934916486,
+              "support": 293,
+              "tp": 242
+            },
+            "Sperm": {
+              "f1": 0.06956521739130435,
+              "fn": 105,
+              "fp": 2,
+              "mcc": 0.1508535956692988,
+              "pr_auc": 0.21803106752469487,
+              "precision": 0.6666666666666666,
+              "predicted_positive": 6,
+              "recall": 0.03669724770642202,
+              "roc_auc": 0.8013583890423703,
+              "support": 109,
+              "tp": 4
+            },
+            "Vesicle": {
+              "f1": 0.10766045548654243,
+              "fn": 414,
+              "fp": 17,
+              "mcc": 0.15643877622526423,
+              "pr_auc": 0.32536035921488893,
+              "precision": 0.6046511627906976,
+              "predicted_positive": 43,
+              "recall": 0.05909090909090909,
+              "roc_auc": 0.7156851552620487,
+              "support": 440,
+              "tp": 26
+            }
+          },
+          "threshold": 0.5,
+          "threshold_operator": ">"
+        }
+      }
+    }
+  }
+}

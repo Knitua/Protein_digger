@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+
+# Runtime products
+*.log
+*.nohup
+*.partial
+*.tmp
+checkpoints/
+cache/
+logs/
+runs/
+
+# Large model/data artifacts
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.h5
+*.npz
+*.fasta
+*.fa
+*.pkl
+*.pickle

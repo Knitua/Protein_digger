@@ -1,0 +1,25 @@
+{
+  "case_specific_logic_used_for_core_selection": false,
+  "core_domain_architecture_pass_edges": 321,
+  "core_prefilter_and_aligned_edges": 433,
+  "core_sequence_primary_pass_edges": 273,
+  "core_strict_function_pass_edges": 21,
+  "extended_by_function_route": {
+    "go_bpmf_direct_idf_jaccard_ge_0p25_with_ge3_shared": 7,
+    "go_mf_direct_jaccard_ge_0p50_with_ge2_shared": 2
+  },
+  "extended_by_stage1_route": {
+    "A1": 5,
+    "B1": 2,
+    "B2": 2
+  },
+  "passing_edges": 9,
+  "positive_control_prefilter_edges": 294,
+  "primary_final80_failure_pool": 2631,
+  "primary_final80_positive_seeds": 1862,
+  "primary_stage2_labels_modified": false,
+  "run_id": "stage2_5_homology_function_review_v3_20261006",
+  "same_anchor_evidence_tiers_used": false,
+  "screened_canonical_universe": 4493,
+  "unique_extended_candidates": 9
+}

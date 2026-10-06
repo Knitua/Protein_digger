@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "all_extended_are_primary_failures": true,
+    "all_passing_edges_meet_primary_sequence_rule": true,
+    "all_passing_edges_meet_strict_domain_architecture": true,
+    "all_passing_edges_meet_strict_function_rule": true,
+    "case_specific_validation_not_used": true,
+    "core_accession_sets_disjoint": true,
+    "extended_accessions_unique": true,
+    "failure_pool_is_2631": true,
+    "primary_stage2_labels_not_modified": true,
+    "screened_universe_is_4493": true,
+    "seed_count_is_1862": true
+  },
+  "run_id": "stage2_5_homology_function_review_v3_20261006",
+  "status": "PASS"
+}

@@ -1,0 +1,30 @@
+{
+  "release": "v2026.10.06",
+  "reference": {
+    "reviewed_human_canonical_proteins": 20416,
+    "working_anchor_accessions": 2368
+  },
+  "formal_results": {
+    "candidate_records": 1580,
+    "unique_atomic_genes": 1573,
+    "protein_accessions": 1620,
+    "candidate_anchor_pairs": 5957,
+    "routes": {
+      "A": {"candidate_records": 954, "pairs": 3530},
+      "B1": {"candidate_records": 429, "pairs": 1593},
+      "B2": {"candidate_records": 85, "pairs": 344},
+      "B3": {"candidate_genes": 112, "isoforms": 152, "pairs": 490}
+    }
+  },
+  "stage25_v3": {
+    "screened_universe": 4493,
+    "positive_seeds": 1862,
+    "failure_pool": 2631,
+    "extended_candidates": 9
+  },
+  "capsul_benchmark": {
+    "split": {"train": 14126, "validation": 3027, "test": 3028},
+    "selection": "validation_bce_only",
+    "threshold": "probability > 0.5"
+  }
+}
