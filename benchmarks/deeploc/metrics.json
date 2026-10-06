@@ -52,11 +52,6 @@
       "proteindigger_nucleus_specialist": {"mean": 0.838309306576396, "std": 0.020446507902337152},
       "difference_percentage_points": 2.063547074407823
     },
-    "nucleus_recall": {
-      "deeploc_2_prott5": {"mean": 0.7647394290750255, "std": 0.02775657826927494},
-      "proteindigger_nucleus_specialist": {"mean": 0.7599873828103735, "std": 0.020753184853057372},
-      "difference_percentage_points": -0.47520462646519746
-    },
     "nucleus_f1": {
       "deeploc_2_prott5": {"mean": 0.7894108850186837, "std": 0.013480950183191065},
       "proteindigger_nucleus_specialist": {"mean": 0.7971916898055873, "std": 0.019975740447474546},
