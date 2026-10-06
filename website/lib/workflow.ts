@@ -1,0 +1,2 @@
+export const workspaceNames:Record<string,string>={overview:'研究概览',reference:'蛋白组分区 · Stage0',a:'核定位筛选 · Stage1',b1:'核定位筛选 · Stage1',b2:'调控网络筛选 · Stage1',b3:'异构体筛选 · Stage1',pairs:'蛋白互作网络 · Stage2',stage25:'同源功能扩展 · Stage2',candidates:'候选蛋白库',downloads:'方法与数据来源','nucleus-model':'核定位模型与评估'};
+export const workflowBranches=[{id:'a',route:'A',label:'核注释功能分层'},{id:'b1',route:'B1',label:'序列核定位预测'},{id:'b2',route:'B2',label:'调控网络筛选'},{id:'b3',route:'B3',label:'异构体筛选'}];

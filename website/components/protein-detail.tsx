@@ -1,0 +1,32 @@
+"use client";
+import {Sheet,SheetContent,SheetHeader,SheetTitle,SheetDescription} from '@/components/ui/sheet';
+import {Button} from '@/components/ui/button';
+import {useAtlas,RecordRow,display,regulatoryLabels,tierLabels,depthLabels} from '@/lib/atlas';
+import {Release} from '@/lib/release';
+function SequenceComparison({protein}:{protein:RecordRow}){
+ const {data}=useAtlas<Record<string,RecordRow>>('protein_records/'+protein.parent.slice(0,4));
+ const parent=data?.[protein.parent];
+ if(!parent?.sequence||!protein.sequence)return <p>正在载入代表序列…</p>;
+ const a:string=parent.sequence,b:string=protein.sequence;
+ let left=0,right=0;while(left<Math.min(a.length,b.length)&&a[left]===b[left])left++;
+ while(right<Math.min(a.length,b.length)-left&&a[a.length-right-1]===b[b.length-right-1])right++;
+ const segment=(s:string)=>s.slice(left,s.length-right);
+ return <section className="sequence-comparison"><h4>与代表序列的直接对照</h4><p>代表序列 {a.length} aa；此异构体 {b.length} aa。</p>{a===b?<p>两条冻结氨基酸序列完全相同。</p>:<><p>连续相同前端：{left} aa；连续相同后端：{right} aa。</p><div className="comparison-segments">{[[protein.parent,a],[protein.accession||'此异构体',b]].map(([id,s])=><details key={id}><summary>{id} · 中间差异区段 {segment(s).length} aa</summary><pre>{segment(s)||'该序列在此区段为空'}</pre></details>)}</div><p className="muted">仅比较完全相同的两端及中间序列，不作同源比对或结构功能推断。完整序列仍按各自编号保留。</p></>}</section>;
+}
+export default function ProteinDetail({accession,onClose,onSelect,release,onPairs}:{accession:string;onClose:()=>void;onSelect:(id:string)=>void;release:Release;onPairs:(id:string)=>void}){
+ const {data,error}=useAtlas<Record<string,RecordRow>>(accession?'protein_records/'+accession.slice(0,4):null);const p=data?.[accession];const pairs=release.pairs.filter(r=>r.candidate===accession||r.anchor===accession);const pr=p?.prediction;const a=p?.annotation;const net=p?.network;
+ return <Sheet open={!!accession} onOpenChange={o=>{if(!o)onClose()}}><SheetContent className="detail-sheet protein-sheet"><SheetHeader><SheetTitle>{p?.gene||accession}</SheetTitle><SheetDescription>{accession} · {p?.parent?'可变异构体':'蛋白记录'}</SheetDescription></SheetHeader><div className="detail-body">{!p?<p>{error||(!data?'正在载入蛋白证据…':'参考数据集中没有该蛋白记录。')}</p>:<><h3>{p.name}</h3><dl className="protein-facts"><dt>序列长度</dt><dd>{p.length} aa</dd><dt>调控锚点</dt><dd>{p.anchor?'是':'否'}</dd><dt>入选筛选路径</dt><dd>{p.delivery?.join('、')||'未列入本批候选'}</dd>{p.parent&&<><dt>代表序列</dt><dd><button className="text-link" onClick={()=>onSelect(p.parent)}>{p.parent}</button></dd></>}</dl>
+ {!p.parent&&<section><h4>参考分区与锚点状态</h4><dl><dt>核注释分区</dt><dd>{p.partition==='A'?'注释适用于代表序列':'无适用的严格核定位注释'}</dd><dt>锚点来源</dt><dd>{p.anchorSources||'非工作锚点'}</dd><dt>锚点排除状态</dt><dd>{p.excluded?'按蛋白编号或基因规则排除':'保留为非锚点输入'}</dd>{p.matchedAnchorGenes&&<><dt>关联锚点基因</dt><dd>{p.matchedAnchorGenes}</dd></>}</dl></section>}
+ <section><h4>亚细胞定位证据</h4><p>{p.canonicalLocation||p.location||'未提供定位说明'}</p>{p.isoformLocation&&<details><summary>仅适用于其他异构体的定位说明</summary><p>{p.isoformLocation}</p></details>}</section>
+ {pr&&<section><h4>序列驱动核定位预测</h4><dl><dt>DeepLoc 核定位分数</dt><dd>{display(pr.deeploc_nucleus_prob,6)}</dd><dt>NLSExplorer 最高窗口分数</dt><dd>{display(pr.nlsexplorer_nls_prob_max,6)}</dd><dt>联合条件</dt><dd>{pr.both_gt_0p5?'两项均 > 0.5':'未满足双模型条件'}</dd><dt>最高分窗口</dt><dd>{display(pr.nlsexplorer_max_window_start_1based)}–{display(pr.nlsexplorer_max_window_end_1based)} aa</dd><dt>DeepLoc 长序列处理</dt><dd>{pr.deeploc_was_clipped_gt_4000?'保留两端各2,000 aa':'未截取'}</dd></dl><div className="sequence-track" aria-label="最高分序列窗口"><span style={{left:`${((pr.nlsexplorer_max_window_start_1based||1)-1)/p.length*100}%`,width:`${((pr.nlsexplorer_max_window_end_1based||1)-(pr.nlsexplorer_max_window_start_1based||1)+1)/p.length*100}%`}}/></div><p className="muted">高分窗口为模型汇总位置，不是实验确定的核定位信号。</p></section>}
+ {a&&<section><h4>核定位蛋白的功能分层</h4><dl>{[['调控证据',regulatoryLabels[a.regulatory_evidence_status]],['功能分层',tierLabels[a.final_tier]],['研究深度',depthLabels[a.study_depth]],['合格功能 PMID',a.function_pmid_count],['功能证据模态',a.function_evidence_modality_count],['主导过程',a.dominant_process_major],['主导过程集中度',a.housekeeping_dominance],['过程覆盖率',a.classification_coverage],['专一文献比例',a.dominant_exclusive_fraction],['过程熵',a.normalized_process_entropy],['机器角色',a.machine_role_evidence_level],['核定位标签',a.nuclear_evidence_primary],['资源状态',a.resource_completeness_status]].map(([k,v])=><div className="dl-row" key={String(k)}><dt>{k}</dt><dd>{display(v)}</dd></div>)}</dl><p className="muted">基因级功能指标回填：{a.propagated_from_gene_level==='1'?'是':'见来源记录'}。定位证据仍按蛋白保留。</p>{p.evidencePMIDs?.length>0&&<p>文献编号：{p.evidencePMIDs.join('、')}</p>}</section>}
+ {net&&<section><h4>调控网络邻近性</h4><dl>{[['注释图加权距离',net.shortest_path_to_tf_epifactor_seed],['共享种子 IDF',net.shared_seed_idf_raw],['有向网络距离',net.omnipath_directed_distance_to_seed],['3跳可达锚点数',net.omnipath_reachable_seed_count_3hop],['综合分',net.network_score],['排名',net.network_rank]].map(([k,v])=><div className="dl-row" key={String(k)}><dt>{k}</dt><dd>{display(v)}</dd></div>)}</dl><p>{net.b1Excluded?'已属于B1，不进入B2正式排名。':net.selected?'属于B2前2%候选。':'未进入B2前2%候选。'}</p></section>}
+ {p.isoform&&<section><h4>异构体评价</h4><dl>{[['母本进入保守分支范围',p.isoform.parentEligible?'是':'否'],['异构体特异核注释支持',p.isoform.direct?'有':'未记录'],['定位双模型联合条件',p.isoform.dual?'满足':'未满足'],['核定位联合入口',p.isoform.localizationPass?'通过':'未通过'],['DeepLoc 分数',p.isoform.deeploc],['NLSExplorer 分数',p.isoform.nlsexplorer],['进入保守分支',p.isoform.selected?'是':'否'],['历史B1排除',p.isoform.b1Excluded?'是':'否'],['锚点排除',p.isoform.anchorExcluded?'是':'否']].map(([k,v])=><div className="dl-row" key={String(k)}><dt>{k}</dt><dd>{display(v)}</dd></div>)}</dl><p className="muted">保守分支采用历史B1的1,340条排除集合。</p></section>}
+ {p.parent&&<SequenceComparison protein={{...p,accession}}/>}
+ <section><h4>功能说明{p.functionInherited?'（代表序列注释）':''}</h4><p>{p.function||'当前参考记录未提供功能说明。'}</p></section>
+ <section><h4>互作证据</h4><p>{pairs.length} 条本批配对来源记录</p>{!!pairs.length&&<Button onClick={()=>onPairs(accession)}>查看关联配对</Button>}</section>
+ {!!p.isoforms?.length&&<section><h4>可变异构体</h4><div className="accession-chips">{p.isoforms.map((id:string)=><button key={id} onClick={()=>onSelect(id)}>{id}</button>)}</div></section>}
+ <details className="sequence-details"><summary>氨基酸序列 · {p.length} aa</summary><pre>{p.sequence||'未提供'}</pre></details>
+ <details><summary>记录来源</summary><p>数据集合：当前候选与配对记录</p><p>数据记录行：{p.sourceRow||a?.sourceRow||'见版本清单'}</p><p>{Object.values(p.references||{}).join('；')}</p></details>
+ </>}</div></SheetContent></Sheet>;
+}

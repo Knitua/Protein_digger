@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "archive_sha256": "e3b963fb4a68cb44130a1a347d3929d0ee8d54d2a6896c57eace86e7daf06a05",
+  "parts": [
+    {
+      "name": "public.tar.gz.part00",
+      "bytes": 10485760,
+      "sha256": "06fbea4a3ca85c97a7c3c3b3ae7ec704e51e2de1abba168c5d2ed1970f6625de"
+    },
+    {
+      "name": "public.tar.gz.part01",
+      "bytes": 10485760,
+      "sha256": "cded97aa7e4ed9a2f5826ce00d2c0c559fe755b0a88edeb401bae76cf2d176b7"
+    },
+    {
+      "name": "public.tar.gz.part02",
+      "bytes": 10485760,
+      "sha256": "d57a7a2f229450cef371c8464b7f5f56989ef326557b584777fc4797e84b9f69"
+    },
+    {
+      "name": "public.tar.gz.part03",
+      "bytes": 10485760,
+      "sha256": "309eab15a76e91a9f891cf7db710e1d8857d9375fa60e7d38d17e53ded34b426"
+    },
+    {
+      "name": "public.tar.gz.part04",
+      "bytes": 7556705,
+      "sha256": "8132421066ffb057a06aa86bdde0504b8f9b9ec70a22a0f95d727b789c0310e4"
+    }
+  ]
+}

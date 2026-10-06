@@ -1,0 +1,66 @@
+/* Frozen candidate–seed records, displayed at readable size without a scaled viewport. */
+.homology-studio{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:38px;padding:28px;background:#fff;align-items:start}
+.homology-map-heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 14px;margin-bottom:23px}
+.homology-map-heading h2,.homology-comparison>header h2,.homology-table-heading h2{font-size:18px;line-height:1.5;font-weight:650;color:#2c4c68;margin:0}
+.homology-map-heading>span{font-size:13px;color:#6c8398}
+.homology-column-head{display:grid;grid-template-columns:144px 1fr auto;gap:0;color:#73879a;font-size:12px;padding:0 14px 10px 0}
+.homology-column-head>span:nth-child(2){padding-left:54px}
+.homology-groups{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.homology-group{display:grid;grid-template-columns:144px 54px minmax(0,1fr);align-items:center;min-width:0;border-radius:10px;padding:4px 0;background:linear-gradient(90deg,#fbfaf6,transparent 72%)}
+.homology-group.has-selection{background:linear-gradient(90deg,#fbf8f0,#f4faf9 100%)}
+.homology-seed{display:flex;flex-direction:column;align-items:flex-start;justify-self:start;gap:3px;padding:6px 12px;border-radius:7px;cursor:pointer;min-width:0;max-width:100%;text-align:left}
+.homology-seed strong{font-size:16px;font-weight:650;color:#8c6b34;overflow-wrap:anywhere}
+.homology-seed code,.homology-candidate code{font-size:11px;line-height:1.2;color:#7b8d9d;letter-spacing:.15px}
+.homology-seed:hover strong{text-decoration:underline;text-underline-offset:4px}
+.homology-branches{display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.homology-branches path{stroke:#c9baa0;fill:none;stroke-width:1.25;vector-effect:non-scaling-stroke}
+.homology-branches path.is-selected{stroke:#9c8052;stroke-width:1.8}.homology-branches circle{fill:#b99653}
+.homology-candidates{min-width:0;display:grid;grid-auto-rows:46px}
+.homology-candidate{width:100%;min-width:0;position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid transparent;border-radius:8px;padding:4px 12px;text-align:left;cursor:pointer;color:#34566b}
+.homology-candidate:before{content:'';position:absolute;left:-4px;top:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:#2a9b90;box-shadow:0 0 0 3px #fff}
+.homology-candidate>span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.homology-candidate strong{font-size:16px;font-weight:600;line-height:1.15;overflow-wrap:anywhere}
+.homology-candidate b{font-size:15px;font-weight:550;font-variant-numeric:tabular-nums;color:#738799;white-space:nowrap}
+.homology-candidate:hover{background:#eff7f6;border-color:#d0e6e3}
+.homology-candidate.is-selected{background:#edf7f5;border-color:#81b8b1;box-shadow:inset 3px 0 #38968a}
+.homology-candidate.is-selected strong,.homology-candidate.is-selected b{color:#23665e}
+.homology-studio button:focus-visible{outline:2px solid #396fb7;outline-offset:3px}
+.homology-map-caption{font-size:12px;line-height:1.7;margin:16px 0 0;color:#7a8998}
+.homology-comparison{min-width:0;background:linear-gradient(140deg,#f5f9fc,#f8fbfa);border:1px solid #e1eaf0;border-radius:14px;padding:24px 26px}
+.homology-comparison>header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.homology-appendix-badge{color:#5e7b84;background:#e8f0f1;font-size:12px;padding:4px 9px;border-radius:5px}
+.homology-pair-title{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);align-items:center;gap:16px;margin:24px 0 27px}
+.homology-pair-title>button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:5px;min-width:0;cursor:pointer}
+.homology-pair-title>button>span{font-size:12px;color:#718799}
+.homology-pair-title strong{font-size:clamp(22px,1.8vw,29px);font-weight:650;line-height:1.25;overflow-wrap:anywhere;color:#2b786d}
+.homology-pair-title code{font-size:12px;color:#738899}
+.homology-pair-title .homology-pair-seed strong{color:#957441}
+.homology-pair-title button:hover strong{text-decoration:underline;text-underline-offset:4px}
+.homology-pair-line{height:1px;background:linear-gradient(90deg,#72aaa3,#bea980);position:relative}
+.homology-pair-line:before,.homology-pair-line:after{position:absolute;top:-2px;width:5px;height:5px;border-radius:50%;content:'';background:#72aaa3}.homology-pair-line:after{right:0;background:#bea980}
+.homology-identity-score{padding:0 0 23px;border-bottom:1px solid #e0e8ec}
+.homology-identity-score>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.homology-identity-score span{font-size:14px;color:#58788b;display:flex;gap:8px;align-items:center}
+.homology-identity-score strong{font-size:32px;font-weight:620;color:#29685f;line-height:1.2;font-variant-numeric:tabular-nums}
+.homology-identity-track{height:7px;margin-top:13px;border-radius:5px;background:#e0e9ed;overflow:hidden}
+.homology-identity-track>span{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,#86b8b1,#3b9588)}
+.homology-evidence-lines{display:grid;gap:22px;margin:24px 0}
+.homology-evidence-lines>div{display:flex;gap:12px;align-items:flex-start}
+.homology-evidence-icon{width:34px;height:34px;flex-shrink:0;border:1px solid #d8e5ea;background:#fff;border-radius:9px;display:grid;place-items:center;color:#658b9b}
+.homology-evidence-lines h3{font-size:15px;font-weight:600;color:#3a5b71;line-height:1.5;margin:0 0 4px}
+.homology-evidence-lines p{font-size:13px;line-height:1.7;color:#6f8798;margin:0}
+.homology-full-evidence{border-top:1px solid #e0e8ec;padding-top:16px;font-size:13px;color:#527188;line-height:1.8}
+.homology-full-evidence summary{list-style:none;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:550;cursor:pointer;color:#45698b}
+.homology-full-evidence summary::-webkit-details-marker{display:none}.homology-full-evidence[open] summary>svg{transform:rotate(90deg)}
+.homology-full-evidence summary:focus-visible{outline:2px solid #396fb7;outline-offset:4px;border-radius:3px}
+.homology-detail-metrics{margin:16px 0;background:#ffffffb3;border-radius:7px;padding:8px 12px}
+.homology-detail-metrics>div{display:flex;justify-content:space-between;gap:12px;padding:5px 0}.homology-detail-metrics dd{font-variant-numeric:tabular-nums;color:#2d566d}
+.homology-full-evidence h3{font-weight:600;font-size:13px;margin:16px 0 5px}.homology-full-evidence p{margin:6px 0}
+.homology-full-evidence .homology-detail-note{font-size:12px;color:#7e8e9a}
+.homology-term-list dt{font-size:12px;margin-top:13px;color:#71899a}.homology-term-list dd{overflow-wrap:anywhere}
+.homology-table-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 12px}
+.homology-table-heading h2{font-size:17px}.homology-table-heading button{font-size:12px}
+@media(max-width:1450px){.homology-studio{gap:24px;padding:24px}.homology-group{grid-template-columns:110px 36px minmax(0,1fr)}.homology-column-head{grid-template-columns:110px 1fr auto}.homology-column-head>span:nth-child(2){padding-left:36px}.homology-comparison{padding:23px 20px}.homology-pair-title{gap:12px;grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr)}}
+@media(max-width:1150px){.homology-studio{grid-template-columns:1fr}.homology-group{grid-template-columns:150px 70px minmax(0,1fr)}.homology-column-head{grid-template-columns:150px 1fr auto}.homology-column-head>span:nth-child(2){padding-left:70px}.homology-comparison{padding:24px}.homology-pair-title strong{font-size:27px}.homology-map-caption{margin-top:12px}}
+@media(max-width:600px){.homology-studio{padding:18px 14px;gap:22px}.homology-map-heading{margin-bottom:17px}.homology-map-heading h2,.homology-comparison>header h2{font-size:17px}.homology-group{grid-template-columns:90px 25px minmax(0,1fr)}.homology-column-head{grid-template-columns:90px 1fr auto;padding-right:7px;font-size:11px}.homology-column-head>span:nth-child(2){padding-left:25px}.homology-seed{padding-left:4px;padding-right:4px}.homology-seed strong,.homology-candidate strong{font-size:14px}.homology-candidate{padding:4px 6px 4px 9px;gap:4px}.homology-candidate b{font-size:12px}.homology-seed code,.homology-candidate code{font-size:10px}.homology-comparison{padding:19px 15px}.homology-pair-title{gap:10px;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr)}.homology-pair-title strong{font-size:23px}.homology-detail-metrics{font-size:12px;padding-inline:8px}.homology-identity-score strong{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.homology-studio *{transition:none!important;scroll-behavior:auto!important}}

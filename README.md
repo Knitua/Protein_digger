@@ -4,6 +4,18 @@
 
 [中文](#中文) · [English](#english)
 
+## 在线研究工作台 / Research Workbench
+
+### [→ 直接打开 ProteinDigger 网页](https://knitua.github.io/Protein_digger/)
+
+无需安装或登录，即可浏览完整研究工作台：候选蛋白、阶段数据库、互作网络、方法资料和核定位模型比较。
+
+**[候选蛋白库](https://knitua.github.io/Protein_digger/#view=candidates)** · **[蛋白互作网络](https://knitua.github.io/Protein_digger/#view=pairs)** · **[核定位模型与评估](https://knitua.github.io/Protein_digger/#view=nucleus-model)** · **[方法与数据下载](https://knitua.github.io/Protein_digger/#view=downloads)**
+
+The full read-only workbench is available at **https://knitua.github.io/Protein_digger/**. No installation or sign-in is required. It includes searchable stage databases, candidate and interaction exploration, protein details, method downloads, and the Nucleus Specialist comparison. No online prediction is performed.
+
+网页源码与发布说明见 [`website/`](website/)。网页使用冻结结果，未更改候选或配对；同源功能扩展仍作为独立附表，不构成直接互作证据。
+
 ![ProteinDigger multi-route candidate screening overview](docs/assets/proteindigger-screening-overview.png)
 
 ## 中文
